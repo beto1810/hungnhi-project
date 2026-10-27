@@ -1,0 +1,28 @@
+{
+  "name": "hung-nhi-prototype-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:quotation": "node --test tools/quotation.test.mjs",
+    "lint": "eslint src/ProductGallery.jsx src/Home.jsx src/HeroGallery.jsx src/components.jsx src/ConsultationForm.jsx src/businessConfig.js tools/quotation.test.mjs"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.3.0",
+    "lucide-react": "^1.61.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "playwright": "^1.64.1",
+    "vite": "^8.3.5"
+  }
+}

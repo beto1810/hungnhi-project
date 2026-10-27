@@ -1,0 +1,403 @@
+[
+  {
+    "id": "may-moc-thiet-bi",
+    "name": "Máy móc & thiết bị",
+    "children": [
+      {
+        "name": "Máy khoan & bắt vít",
+        "types": "Khoan điện; Khoan búa; Vặn vít; Siết bu lông",
+        "filters": "Nguồn điện; Điện áp; Công suất; Đường kính khoan; Thương hiệu; Giá"
+      },
+      {
+        "name": "Máy mài & đánh bóng",
+        "types": "Mài góc; Mài khuôn; Đánh bóng",
+        "filters": "Nguồn điện; Điện áp; Công suất; Đường kính đĩa; Thương hiệu"
+      },
+      {
+        "name": "Máy cắt & cưa",
+        "types": "Cắt sắt; Cắt nhôm; Cưa đĩa; Cưa lọng; Cưa kiếm",
+        "filters": "Nguồn điện; Công suất; Đường kính lưỡi; Vật liệu cắt; Thương hiệu"
+      },
+      {
+        "name": "Máy chà nhám",
+        "types": "Chà nhám rung; Chà nhám băng; Chà nhám quỹ đạo",
+        "filters": "Nguồn điện; Công suất; Kích thước đế; Thương hiệu"
+      },
+      {
+        "name": "Máy hàn",
+        "types": "Hàn que; MIG; TIG",
+        "filters": "Dòng hàn; Điện áp; Công suất; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Máy bơm",
+        "types": "Bơm nước; Bơm chìm; Bơm tăng áp",
+        "filters": "Công suất; Lưu lượng; Cột áp; Điện áp; Thương hiệu"
+      },
+      {
+        "name": "Máy nén khí",
+        "types": "—",
+        "filters": "Công suất; Dung tích bình; Áp suất; Lưu lượng; Thương hiệu"
+      },
+      {
+        "name": "Máy xây dựng",
+        "types": "Đầm; Máy trộn; Cắt bê tông",
+        "filters": "Công suất; Nhiên liệu; Trọng lượng; Thương hiệu"
+      },
+      {
+        "name": "Máy sân vườn",
+        "types": "Cắt cỏ; Thổi; Tỉa; Cưa",
+        "filters": "Nguồn điện; Dung tích; Công suất; Thương hiệu"
+      }
+    ],
+    "image": "/assets/warehouse-tools.webp"
+  },
+  {
+    "id": "dung-cu-cam-tay",
+    "name": "Dụng cụ cầm tay",
+    "children": [
+      {
+        "name": "Kìm",
+        "types": "Kìm điện; Kìm cắt; Kìm mũi; Kìm phe",
+        "filters": "Kích thước; Vật liệu; Cách điện; Thương hiệu"
+      },
+      {
+        "name": "Cờ lê & mỏ lết",
+        "types": "—",
+        "filters": "Kích thước; Vật liệu; Loại; Thương hiệu"
+      },
+      {
+        "name": "Tuýp & cần siết",
+        "types": "Đầu tuýp; Cần siết; Thanh nối; Bộ tuýp",
+        "filters": "Kích thước đầu; Hệ inch/mm; Chiều dài; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Tua vít & lục giác",
+        "types": "Tua vít; Tua vít cách điện; Lục giác; Bộ dụng cụ",
+        "filters": "Kích thước; Đầu vít; Cách điện; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Búa & dụng cụ tháo lắp",
+        "types": "Búa sắt; Búa cao su; Dụng cụ nhổ đinh",
+        "filters": "Trọng lượng; Vật liệu; Kích thước; Thương hiệu"
+      },
+      {
+        "name": "Dụng cụ cắt",
+        "types": "Dao; Kéo; Cưa; Kìm cộng lực",
+        "filters": "Loại lưỡi; Kích thước; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Dụng cụ đo",
+        "types": "Thước cuộn; Thước thủy; Thước cặp; Panme",
+        "filters": "Chiều dài; Độ chính xác; Dải đo; Thương hiệu"
+      }
+    ],
+    "image": "/assets/tools-wall.webp"
+  },
+  {
+    "id": "thiet-bi-dien",
+    "name": "Thiết bị điện",
+    "children": [
+      {
+        "name": "Thiết bị đóng cắt",
+        "types": "CB; MCB; MCCB; Cầu chì",
+        "filters": "Dòng định mức; Số cực; Điện áp; Khả năng cắt; Thương hiệu"
+      },
+      {
+        "name": "Ổ cắm & công tắc",
+        "types": "Ổ cắm; Công tắc; Phích cắm",
+        "filters": "Số ổ; Dòng điện; Điện áp; Loại lắp; Thương hiệu"
+      },
+      {
+        "name": "Dây & cáp điện",
+        "types": "—",
+        "filters": "Tiết diện; Số lõi; Điện áp; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Thiết bị chiếu sáng",
+        "types": "Đèn LED; Đèn pha; Đèn nhà xưởng; Đèn sự cố",
+        "filters": "Công suất; Điện áp; Màu ánh sáng; IP; Kiểu đèn; Thương hiệu"
+      },
+      {
+        "name": "Tủ điện & phụ kiện",
+        "types": "Tủ điện; Thanh ray; Domino; Phụ kiện",
+        "filters": "Kích thước; Dòng điện; Số module; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Điều khiển & bảo vệ",
+        "types": "Contactor; Relay; Rơ-le nhiệt",
+        "filters": "Dòng định mức; Điện áp cuộn; Số cực; Thương hiệu"
+      }
+    ],
+    "image": "/assets/cable-stock.webp"
+  },
+  {
+    "id": "ong-van-phu-kien",
+    "name": "Ống – van & phụ kiện",
+    "children": [
+      {
+        "name": "Ống nhựa",
+        "types": "PVC; HDPE; PPR",
+        "filters": "Đường kính; Áp lực; Chiều dài; Tiêu chuẩn; Thương hiệu"
+      },
+      {
+        "name": "Phụ kiện ống",
+        "types": "Co; Tê; Cút; Nối; Bích",
+        "filters": "Đường kính; Vật liệu; Kiểu nối; Áp lực; Thương hiệu"
+      },
+      {
+        "name": "Van",
+        "types": "Van bi; Van bướm; Van cổng; Van một chiều",
+        "filters": "Kích thước DN; Vật liệu; Kiểu kết nối; Áp lực; Thương hiệu"
+      },
+      {
+        "name": "Phụ kiện ren",
+        "types": "Ren trong; Ren ngoài; Nối ren",
+        "filters": "Kích thước ren; Vật liệu; Kiểu ren; Thương hiệu"
+      },
+      {
+        "name": "Cấp thoát nước",
+        "types": "Phễu; Siphon; Thoát sàn",
+        "filters": "Kích thước; Vật liệu; Kiểu lắp; Thương hiệu"
+      }
+    ],
+    "image": "/assets/pipe-stock.webp"
+  },
+  {
+    "id": "co-khi-kim-khi",
+    "name": "Cơ khí – kim khí",
+    "children": [
+      {
+        "name": "Bulong",
+        "types": "Bu lông inox 201; Bu lông inox 304; Bu lông thép mạ kẽm; Bu lông thép",
+        "filters": "Đường kính; Chiều dài; Cấp bền; Vật liệu; Ren; Thương hiệu"
+      },
+      {
+        "name": "Lục giác",
+        "types": "Lục giác inox 201; Lục giác inox 304; Lục giác thép",
+        "filters": "Đường kính; Chiều dài; Cấp bền; Vật liệu; Ren; Thương hiệu"
+      },
+      {
+        "name": "Đai ốc & long đền",
+        "types": "Đai ốc; Long đền phẳng; Long đền vênh",
+        "filters": "Kích thước; Vật liệu; Cấp bền; Ren"
+      },
+      {
+        "name": "Ốc vít",
+        "types": "Vít gỗ; Vít tôn; Vít máy",
+        "filters": "Kích thước; Vật liệu; Đầu vít; Ren; Thương hiệu"
+      },
+      {
+        "name": "Bạc đạn",
+        "types": "Bạc đạn cầu; Bạc đạn đũa; Bạc đạn chặn",
+        "filters": "Mã bạc đạn; Đường kính trong; Đường kính ngoài; Độ dày; C3/P6; Thương hiệu"
+      },
+      {
+        "name": "Tắc kê & neo",
+        "types": "Tắc kê sắt; Tắc kê nhựa; Nở",
+        "filters": "Đường kính; Chiều dài; Vật liệu; Tải trọng; Thương hiệu"
+      }
+    ],
+    "image": "/assets/steel-stock.webp"
+  },
+  {
+    "id": "han-cat-mai",
+    "name": "Hàn – cắt – mài",
+    "children": [
+      {
+        "name": "Que & dây hàn",
+        "types": "Que hàn; Dây MIG; Dây TIG",
+        "filters": "Đường kính; Vật liệu; Dòng hàn; Tiêu chuẩn; Thương hiệu"
+      },
+      {
+        "name": "Đá cắt & đá mài",
+        "types": "Đá cắt; Đá mài",
+        "filters": "Đường kính; Độ dày; Vật liệu gia công; Hạt mài; Thương hiệu"
+      },
+      {
+        "name": "Vật tư mài & đánh bóng",
+        "types": "Nhám; Bánh nhám; Bàn chải",
+        "filters": "Độ hạt; Kích thước; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Phụ kiện hàn",
+        "types": "Kìm hàn; Mặt nạ; Cáp hàn",
+        "filters": "Dòng hàn; Kích thước; Vật liệu; Thương hiệu"
+      }
+    ],
+    "image": "/assets/hand-tools.webp"
+  },
+  {
+    "id": "do-luong-kiem-tra",
+    "name": "Đo lường – kiểm tra",
+    "children": [
+      {
+        "name": "Đo điện",
+        "types": "Đồng hồ vạn năng; Ampe kìm; Đo cách điện",
+        "filters": "Dải đo; Độ chính xác; CAT; Điện áp; Thương hiệu"
+      },
+      {
+        "name": "Đo nhiệt",
+        "types": "Súng đo nhiệt; Nhiệt kế",
+        "filters": "Dải nhiệt; Độ chính xác; Khoảng cách đo; Thương hiệu"
+      },
+      {
+        "name": "Đo cơ khí",
+        "types": "Thước cặp; Panme; Đồng hồ so",
+        "filters": "Dải đo; Độ chính xác; Độ chia; Thương hiệu"
+      },
+      {
+        "name": "Đo khoảng cách",
+        "types": "Máy đo laser; Thước laser",
+        "filters": "Tầm đo; Độ chính xác; Số tia; Thương hiệu"
+      },
+      {
+        "name": "Cân & đo tải",
+        "types": "Cân bàn; Cân treo; Cân điện tử",
+        "filters": "Tải trọng; Độ chia; Cấp chính xác; Kích thước; Thương hiệu"
+      }
+    ],
+    "image": "/assets/generated/measuring-tools.webp",
+    "illustrative": true
+  },
+  {
+    "id": "thiet-bi-cong-nghiep",
+    "name": "Thiết bị công nghiệp",
+    "children": [
+      {
+        "name": "Thiết bị khí nén",
+        "types": "Súng hơi; Máy mài hơi; Máy khoan hơi; Phụ kiện hơi",
+        "filters": "Áp suất; Lưu lượng; Kích thước đầu nối; Tốc độ; Thương hiệu"
+      },
+      {
+        "name": "Thiết bị nâng hạ",
+        "types": "Kích; Pa lăng; Tời; Móc cẩu",
+        "filters": "Tải trọng; Chiều cao nâng; Chiều dài xích/cáp; Thương hiệu"
+      },
+      {
+        "name": "Thiết bị bảo trì",
+        "types": "Bơm mỡ; Súng bơm mỡ; Thiết bị bảo trì",
+        "filters": "Dung tích; Áp suất; Nguồn điện; Thương hiệu"
+      },
+      {
+        "name": "Cao su & silicone công nghiệp",
+        "types": "Tấm silicone; Tấm cao su",
+        "filters": "Độ dày, khổ rộng, chiều dài, chất liệu"
+      },
+      {
+        "name": "Quạt công nghiệp",
+        "types": "Quạt đứng; Quạt treo tường; Quạt thông gió",
+        "filters": "Đường kính cánh, công suất, điện áp, thương hiệu"
+      },
+      {
+        "name": "Thiết bị vệ sinh công nghiệp",
+        "types": "Máy hút bụi; Máy rửa; Phụ kiện",
+        "filters": "Công suất; Dung tích; Áp lực; Thương hiệu"
+      }
+    ],
+    "image": "/assets/shop-interior.webp"
+  },
+  {
+    "id": "xay-dung-cong-trinh",
+    "name": "Xây dựng – công trình",
+    "children": [
+      {
+        "name": "Dụng cụ thi công",
+        "types": "Bay; Bàn xoa; Xẻng; Cuốc",
+        "filters": "Kích thước; Vật liệu; Cán; Thương hiệu"
+      },
+      {
+        "name": "Thang",
+        "types": "Thang nhôm chữ A; Thang nhôm rút; Thang nhôm gấp",
+        "filters": "Chiều cao, tải trọng, số bậc, thương hiệu"
+      },
+      {
+        "name": "Lưới & bạt công trình",
+        "types": "Lưới an toàn; Lưới chắn; Bạt",
+        "filters": "Kích thước; Mắt lưới; Vật liệu; Màu; Thương hiệu"
+      },
+      {
+        "name": "An toàn công trình",
+        "types": "Biển báo; Dây cảnh báo; Rào chắn",
+        "filters": "Kích thước; Vật liệu; Màu; Tiêu chuẩn"
+      }
+    ],
+    "image": "/assets/storefront-wide.webp"
+  },
+  {
+    "id": "bao-ho-lao-dong",
+    "name": "Bảo hộ lao động",
+    "children": [
+      {
+        "name": "Quần áo bảo hộ",
+        "types": "Quần áo; Áo phản quang",
+        "filters": "Size; Chất liệu; Màu; Tiêu chuẩn; Thương hiệu"
+      },
+      {
+        "name": "Giày & ủng",
+        "types": "Giày bảo hộ; Ủng; Giày cách điện",
+        "filters": "Size; Tiêu chuẩn; Mũi giày; Chất liệu; Thương hiệu"
+      },
+      {
+        "name": "Găng tay",
+        "types": "Cơ khí; Chống cắt; Cách điện",
+        "filters": "Size; Cấp chống cắt; Vật liệu; Tiêu chuẩn; Thương hiệu"
+      },
+      {
+        "name": "Mũ bảo hộ",
+        "types": "Mũ; Phụ kiện",
+        "filters": "Màu; Tiêu chuẩn; Phụ kiện; Thương hiệu"
+      }
+    ],
+    "image": "/assets/generated/safety-equipment.webp",
+    "illustrative": true
+  },
+  {
+    "id": "son-keo-hoa-chat",
+    "name": "Sơn – keo – hóa chất",
+    "children": [
+      {
+        "name": "Sơn",
+        "types": "Sơn công nghiệp; Chống rỉ; Sơn dân dụng",
+        "filters": "Màu; Dung tích; Bề mặt; Tính năng; Thương hiệu"
+      },
+      {
+        "name": "Keo & chất kết dính",
+        "types": "Silicone; Keo AB; Keo xây dựng",
+        "filters": "Dung tích; Vật liệu; Thời gian khô; Thương hiệu"
+      },
+      {
+        "name": "Dầu mỡ & bôi trơn",
+        "types": "Mỡ; Dầu; Chất bôi trơn",
+        "filters": "Dung tích; Độ nhớt; Ứng dụng; Thương hiệu"
+      }
+    ],
+    "image": "/assets/paint-stock.webp"
+  },
+  {
+    "id": "tu-ke-luu-tru",
+    "name": "Tủ – kệ – lưu trữ",
+    "children": [
+      {
+        "name": "Tủ dụng cụ",
+        "types": "Tủ 2 cánh; Tủ kéo; Tủ đồ nghề",
+        "filters": "Kích thước; Số ngăn; Tải trọng; Vật liệu; Màu"
+      },
+      {
+        "name": "Hộp & túi dụng cụ",
+        "types": "Hộp; Túi; Ba lô",
+        "filters": "Kích thước; Số ngăn; Vật liệu; Thương hiệu"
+      },
+      {
+        "name": "Kệ & giá",
+        "types": "Kệ kho; Giá để hàng",
+        "filters": "Kích thước; Tải trọng; Số tầng; Vật liệu"
+      },
+      {
+        "name": "Xe & bàn thao tác",
+        "types": "Xe đẩy; Bàn thao tác",
+        "filters": "Kích thước; Tải trọng; Số tầng; Vật liệu"
+      }
+    ],
+    "image": "/assets/shop-interior.webp"
+  }
+]

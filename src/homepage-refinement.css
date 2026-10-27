@@ -1,0 +1,145 @@
+/* Scoped changes for the requested homepage/form/footer refinement.
+   The existing layout tokens, base styles and interior-page CSS are preserved. */
+@layer components {
+  .brand-card>.brand-card-image{width:190px;max-width:100%;height:65px;object-fit:contain;object-position:center;margin:30px auto}
+  .hero-description .hero-tagline{display:block;color:white;font-size:15px;font-weight:600;line-height:1.7;margin-bottom:8px}
+  .hero-description>span{display:block}
+  .refined-hero .hero-photo{z-index:0}
+  .refined-hero .hero-content{z-index:1;pointer-events:none}
+  .refined-hero .hero-copy{pointer-events:auto}
+  .hero-gallery{position:relative;width:100%;height:100%;overflow:hidden}
+  .refined-hero .hero-gallery .hero-gallery-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease-in-out;will-change:opacity;pointer-events:none}
+  .refined-hero .hero-gallery .hero-gallery-image.is-active{opacity:1}
+  .refined-hero .hero-photo::after{z-index:1;pointer-events:none}
+  .hero-gallery-controls{position:absolute;right:44px;bottom:35px;display:flex;align-items:center;gap:13px;z-index:2;color:white}
+  .hero-gallery-controls>button{width:39px;height:39px;border:1px solid #ffffff80;background:#171e4d75;border-radius:50%;display:grid;place-items:center;color:white;backdrop-filter:blur(5px)}
+  .hero-gallery-controls>button:hover{background:var(--blue);border-color:white}
+  .hero-gallery-dots{display:flex;align-items:center;gap:2px}
+  .hero-gallery-dot{width:18px;height:32px;padding:0;display:grid;place-items:center;background:transparent;border:0}
+  .hero-gallery-dot>span{width:7px;height:7px;border:1px solid #fff;background:#ffffff45;border-radius:50%;transition:background .2s,transform .2s}
+  .hero-gallery-dot.is-active>span{background:#fff;transform:scale(1.2)}
+  .hero-gallery-dot:hover>span{background:#fff}
+  .refined-solutions .section-heading h2{max-width:830px}
+  .solution-image-note{font-size:8px;line-height:1.8;color:#aab9d6;text-align:right;margin-top:13px}
+  .logo-link{display:flex;align-items:center;gap:11px}
+  .logo-link .brand-symbol{width:62px;height:46px;object-fit:contain;flex-shrink:0}
+  .logo-link .brand-name{font-size:20px;font-weight:700;letter-spacing:-.04em;color:var(--navy);white-space:nowrap}
+  .refined-hero .hero-photo img{object-position:72% 40%;filter:brightness(.86) saturate(.85)}
+  .refined-hero .hero-photo::after{background:linear-gradient(90deg,var(--deep),#171e4d65 30%,transparent 68%),linear-gradient(0deg,#0b143f66,transparent 40%)}
+  .refined-brands .container>div{gap:28px}
+  .brand-logo-link{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;height:52px}
+  .brand-logo-link img{width:112px;max-width:100%;height:36px;object-fit:contain}
+  .brand-logo-link.logo-bosch img{width:122px;height:33px}
+  .brand-logo-link.logo-makita img{width:101px;height:35px}
+  .brand-logo-link.logo-total img{width:100px;height:35px}
+  .storefront-about-image>img{object-position:46% 50%}
+  .categories-section .category-card{min-width:0}
+  .refined-solutions .solution-card{height:355px;background:var(--deep);border:1px solid #ffffff24}
+  .refined-solutions .solution-card>img{height:195px;width:100%;object-fit:cover;object-position:center;filter:none}
+  .refined-solutions .solution-card::after{display:none}
+  .refined-solutions .solution-card>div{inset:195px 0 0;display:block;padding:21px 19px;background:var(--deep)}
+  .refined-solutions .solution-card>div>span{display:none}
+  .refined-solutions .solution-card h3{font-size:16px;line-height:1.5;letter-spacing:-.025em}
+  .refined-solutions .solution-card p{font-size:10px;line-height:1.8;max-width:none;margin-top:8px}
+  .refined-solutions .solution-card svg{width:18px;height:18px;margin-top:12px}
+  .consultation-section{background:#eef6fd;border-top:1px solid #e4eef8;border-bottom:1px solid #e4eef8;padding:54px 0;scroll-margin-top:105px}
+  .consultation-layout{display:grid;grid-template-columns:.85fr 1.65fr;gap:55px;align-items:center}
+  .consultation-copy .eyebrow{margin-bottom:18px}
+  .consultation-copy h2{font-size:34px;line-height:1.4;letter-spacing:-.035em}
+  .consultation-copy>p:not(.eyebrow){font-size:13px;line-height:1.9;max-width:340px;margin-top:20px}
+  .zalo-control{margin-top:26px;display:flex;align-items:flex-start;flex-direction:column;gap:8px}
+  .zalo-button{display:inline-flex;align-items:center;justify-content:center;gap:11px;border:1px solid #b4cbee;border-radius:24px;min-height:46px;padding:10px 17px;color:var(--blue);background:#fff;font-size:12px;font-weight:500}
+  .zalo-button:hover:not(:disabled){background:#e4eefb;border-color:var(--blue)}
+  .zalo-button:disabled{cursor:not-allowed;opacity:.65}
+  .zalo-control>small{font-size:9px;color:var(--muted);line-height:1.7}
+  .consultation-form{padding:27px 29px 22px;background:white;border:1px solid #e3eaf3;border-radius:5px;box-shadow:0 4px 25px #272d6d03;min-width:0}
+  .consultation-form fieldset{border:0;padding:0;margin:0;min-width:0}
+  .consultation-fields{display:grid;grid-template-columns:1fr 1fr;gap:17px 22px}
+  .consultation-fields>label{font-size:11px;line-height:1.7;font-weight:500;color:var(--ink);min-width:0}
+  .consultation-fields label>span{color:#b83a3a}
+  .consultation-fields input,.consultation-fields textarea{width:100%;border:1px solid #e0e6ef;border-radius:3px;padding:10px 12px;font-size:11px;line-height:1.8;display:block;margin-top:6px;min-width:0;color:var(--ink);background:white}
+  .consultation-fields input:focus,.consultation-fields textarea:focus{border-color:var(--blue);outline:2px solid #4370b716;outline-offset:0}
+  .consultation-fields input::placeholder,.consultation-fields textarea::placeholder{color:#949db0}
+  .consultation-fields textarea{resize:vertical;min-height:91px;max-height:320px}
+  .consultation-wide{grid-column:1/-1}
+  .consultation-actions{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:19px;align-items:stretch}
+  .attachment-control{position:relative;border:1px dashed #bdcce0;border-radius:3px;min-width:0;padding:10px 12px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+  .attachment-control:focus-within{outline:2px solid var(--blue);outline-offset:2px}
+  .attachment-control>label{font-size:9px;line-height:1.7;display:flex;align-items:center;gap:8px;color:var(--ink);cursor:pointer;font-weight:500}
+  .attachment-control>label svg{color:var(--blue)}
+  .attachment-input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;z-index:1}
+  .attachment-control>small{font-size:8px;color:var(--muted);line-height:1.7;padding-left:25px}
+  .consultation-submit{width:100%;font-size:11px;gap:12px;padding:14px 15px;min-height:64px}
+  .consultation-privacy{font-size:9px;color:var(--muted);margin-top:13px;line-height:1.8}
+  .consultation-connection{font-size:9px;color:#716340;background:#fffaf0;padding:8px 10px;border-left:2px solid #d6c081;margin-top:10px;line-height:1.8}
+  .consultation-message{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;font-size:10px;line-height:1.8;margin-top:13px;border:1px solid transparent;border-radius:2px}
+  .consultation-message>svg{margin-top:2px;flex-shrink:0}
+  .consultation-message.is-error{color:#94433a;background:#fff5f3;border-color:#f0d9d4}
+  .consultation-message.is-success{color:#356c4e;background:#f0f8f3;border-color:#d4e5db}
+  .consultation-message.is-sending{color:var(--blue);background:#f2f6fc}
+  .selected-attachments{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:7px}
+  .selected-attachments li{display:flex;gap:8px;align-items:center;font-size:9px;color:var(--muted);border:1px solid var(--line);padding:7px 9px;min-width:0}
+  .selected-attachments li>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+  .selected-attachments li>small{font-size:8px;white-space:nowrap}
+  .selected-attachments button{padding:3px;display:grid;place-items:center;color:var(--ink)}
+  .sending-spinner{animation:send-spin 1s linear infinite}
+  @keyframes send-spin{to{transform:rotate(360deg)}}
+  .refined-process{background:#fff;padding:34px 0;border-bottom:1px solid var(--line)}
+  .refined-process .process-grid{gap:28px}
+  .refined-process .process-step{display:flex;gap:16px;align-items:center;position:relative;padding-right:22px;min-width:0}
+  .refined-process .process-step>.process-icon{width:59px;height:59px;display:grid;place-items:center;background:#f0f6fd;border-radius:50%;color:var(--blue);flex-shrink:0}
+  .refined-process .process-step .process-icon>svg{margin:0;color:var(--blue)}
+  .refined-process .process-step>.process-step-copy{border:0;padding:0;margin:0;display:block;min-width:0}
+  .refined-process .process-step-copy>span{font-size:22px;color:var(--blue);line-height:1.25;letter-spacing:-.03em;font-weight:500}
+  .refined-process .process-step h3{font-size:11px;line-height:1.7;letter-spacing:-.01em;margin:5px 0 0;font-weight:500;white-space:nowrap}
+  .refined-process .process-step>.process-arrow{position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--blue);margin:0}
+  .compact-footer{padding:0;background:var(--deep)}
+  .compact-footer-grid{display:grid;grid-template-columns:1.15fr .85fr 1.25fr;gap:30px;align-items:center;padding-top:30px;padding-bottom:30px;min-height:185px}
+  .compact-footer-about{max-width:360px}
+  .compact-footer-logo{display:flex;align-items:center;gap:11px;width:fit-content}
+  .footer-symbol-panel{display:grid;place-items:center;width:64px;height:48px;background:#fff;border-radius:1px;padding:5px;flex-shrink:0}
+  .footer-symbol-panel img{width:100%;height:100%;object-fit:contain}
+  .compact-footer-logo>.brand-name{font-size:19px;font-weight:600;color:white;letter-spacing:-.03em}
+  .compact-footer-about>p{font-size:10px;line-height:1.85;color:#bcc6dc;margin-top:10px;max-width:330px}
+  .compact-footer-about>small{display:block;color:#8d9ab7;font-size:8px;margin-top:12px;line-height:1.7}
+  .compact-footer-contact{border-left:1px solid #ffffff27;padding:14px 0 14px 27px;display:flex;flex-direction:column;gap:15px}
+  .compact-footer-contact>a{display:flex;align-items:center;gap:12px;font-size:12px;line-height:1.5;color:#d8dff0;white-space:nowrap}
+  .compact-footer-contact>a>svg{color:#b0c3e1}
+  .compact-footer-navigation{border-left:1px solid #ffffff27;padding:17px 0 17px 27px;display:flex;align-items:center;gap:20px}
+  .compact-footer-navigation>nav{display:flex;flex-wrap:wrap;align-items:center;gap:15px;font-size:9px;color:#cdd6e7;line-height:1.9}
+  .compact-footer-navigation>nav a{white-space:nowrap}
+  .compact-footer .zalo-control{margin:0;align-items:center;max-width:90px;flex-shrink:0;gap:5px}
+  .compact-footer .zalo-button{border-radius:30px;gap:5px;min-width:66px;padding:9px 11px;min-height:39px;font-size:10px;background:#fff;color:var(--blue)}
+  .compact-footer .zalo-button>svg:last-child{display:none}
+  .compact-footer .zalo-button>svg:first-child{width:15px}
+  .compact-footer .zalo-control>small{font-size:7px;text-align:center;color:#9eaecb;line-height:1.6}
+}
+@layer responsive {
+  /* The user explicitly requested image transitions. Keep this effect enabled
+     for the carousel even when the app's generic reduced-motion reset applies. */
+  .refined-hero .hero-gallery .hero-gallery-image{transition:opacity .9s ease-in-out!important}
+  @media(max-width:1150px){
+    .logo-link .brand-symbol{width:52px;height:40px}.logo-link .brand-name{font-size:18px}.logo-link{gap:8px}
+    .refined-brands .container>div{gap:20px}.brand-logo-link img{width:92px;height:31px}
+    .consultation-layout{gap:35px;grid-template-columns:.9fr 1.6fr}.consultation-copy h2{font-size:30px}.consultation-copy>p:not(.eyebrow){font-size:12px}.consultation-form{padding:24px}.consultation-fields{gap:15px 18px}.consultation-actions{gap:18px}.attachment-control{padding:10px}.attachment-control>label{font-size:8px}.attachment-control>small{font-size:7px;padding-left:0}.consultation-submit{font-size:10px;gap:9px}
+    .refined-process .process-step{gap:12px}.refined-process .process-step>.process-icon{width:48px;height:48px}.refined-process .process-icon svg{width:26px}.refined-process .process-step h3{font-size:10px}
+    .compact-footer-grid{grid-template-columns:1.1fr .9fr 1fr;gap:23px}.compact-footer-contact{padding-left:22px}.compact-footer-contact>a{font-size:11px;gap:9px}.compact-footer-navigation{padding-left:22px;gap:16px}.compact-footer-navigation>nav{gap:9px 15px}.compact-footer .zalo-control{max-width:75px}
+  }
+  @media(max-width:900px){
+    .logo-link .brand-symbol{width:44px;height:34px}.logo-link .brand-name{font-size:16px}.logo-link{gap:8px}.brand-logo-link img{width:86px;height:29px}.brand-logo-link.logo-bosch img{width:95px;height:27px}
+    .consultation-layout{gap:28px;grid-template-columns:.8fr 1.5fr}.consultation-copy h2{font-size:26px}.consultation-copy>p:not(.eyebrow){font-size:11px}.consultation-copy .eyebrow{font-size:8px}.consultation-form{padding:21px}.consultation-fields{gap:14px}.consultation-fields>label{font-size:10px}.consultation-fields input,.consultation-fields textarea{font-size:10px;padding:9px}.consultation-actions{gap:12px}.attachment-control>label{gap:5px}.attachment-control>label>svg{width:14px}.consultation-submit{font-size:9px;gap:7px;padding:12px 8px;white-space:normal}.consultation-submit>svg{width:15px}
+    .refined-solutions .solution-card{height:335px}.refined-solutions .solution-card>img{height:165px}.refined-solutions .solution-card>div{inset:165px 0 0;padding:17px 13px}.refined-solutions .solution-card h3{font-size:14px}.refined-solutions .solution-card p{font-size:9px}
+    .refined-process .process-grid{gap:19px}.refined-process .process-step{gap:9px;padding-right:12px}.refined-process .process-step>.process-icon{width:39px;height:39px}.refined-process .process-icon svg{width:23px;height:23px}.refined-process .process-step-copy>span{font-size:19px}.refined-process .process-step h3{font-size:8px}.refined-process .process-step>.process-arrow{width:14px;right:-10px}
+    .compact-footer-grid{grid-template-columns:1.1fr 1fr;gap:22px;padding-top:27px;padding-bottom:27px}.compact-footer-navigation{grid-column:1/-1;border:0;border-top:1px solid #ffffff20;padding:18px 0 0;justify-content:space-between}.compact-footer-navigation>nav{font-size:10px;gap:24px}.compact-footer-contact{padding:15px 0 15px 25px}.compact-footer .zalo-control{max-width:150px;flex-direction:row;align-items:center;gap:10px}.compact-footer .zalo-control>small{max-width:75px;text-align:left}
+  }
+  @media(max-width:680px){
+    .logo-link{width:162px;gap:9px}.logo-link .brand-symbol{width:51px;height:39px}.logo-link .brand-name{font-size:17px}
+    .refined-brands .container>div{gap:14px 18px}.brand-logo-link{width:100%;height:25px}.brand-logo-link img,.brand-logo-link.logo-total img,.brand-logo-link.logo-makita img,.brand-logo-link.logo-bosch img{width:75px;height:25px;max-width:100%}
+    .refined-hero .hero-photo::after{background:linear-gradient(180deg,var(--deep),#171e4d55 28%,transparent 60%)}
+    .storefront-about-image>img{object-position:40% 50%}
+    .refined-solutions .solution-card{height:315px}.refined-solutions .solution-card>img{height:153px}.refined-solutions .solution-card>div{inset:153px 0 0;padding:16px 13px}.refined-solutions .solution-card h3{font-size:14px;line-height:1.5}.refined-solutions .solution-card p{font-size:9px;line-height:1.8;margin-top:8px}.refined-solutions .solution-card svg{margin-top:11px;width:17px;height:17px}
+    .consultation-section{padding:38px 0;scroll-margin-top:86px}.consultation-layout{grid-template-columns:1fr;gap:28px}.consultation-copy h2{font-size:30px;line-height:1.4}.consultation-copy>p:not(.eyebrow){font-size:12px;max-width:330px;margin-top:16px}.consultation-copy .eyebrow{margin-bottom:14px}.consultation-copy .zalo-control{margin-top:19px}.zalo-button{font-size:11px;min-height:43px}.zalo-control>small{font-size:8px}.consultation-form{padding:23px 19px 20px}.consultation-fields{grid-template-columns:1fr;gap:16px}.consultation-fields>label{font-size:11px}.consultation-fields input,.consultation-fields textarea{font-size:12px;padding:10px 11px;line-height:1.8}.consultation-fields textarea{min-height:117px}.consultation-actions{grid-template-columns:1fr;gap:14px;margin-top:18px}.attachment-control{padding:14px}.attachment-control>label{font-size:10px;gap:9px}.attachment-control>label>svg{width:18px}.attachment-control>small{font-size:8px;padding-left:27px}.consultation-submit{font-size:11px;min-height:49px;padding:14px;gap:16px}.consultation-submit>svg{width:18px}.consultation-privacy,.consultation-connection{font-size:8px;line-height:1.9}.consultation-message{font-size:10px;line-height:1.8}.selected-attachments li{font-size:8px}
+    .refined-process{padding:27px 0}.refined-process .process-grid{grid-template-columns:1fr 1fr;gap:25px 19px}.refined-process .process-step{padding:0;gap:11px;align-items:center}.refined-process .process-step>.process-icon{width:43px;height:43px}.refined-process .process-icon svg{width:25px;height:25px}.refined-process .process-step-copy>span{font-size:20px}.refined-process .process-step h3{font-size:9px;line-height:1.7;white-space:normal;margin-top:3px}.refined-process .process-step>.process-arrow{display:none}
+    .compact-footer-grid{grid-template-columns:1fr;gap:22px;padding-top:28px;padding-bottom:26px;min-height:0}.compact-footer-about{max-width:none}.compact-footer-logo>.brand-name{font-size:19px}.footer-symbol-panel{width:62px;height:47px}.compact-footer-about>p{font-size:10px;max-width:320px}.compact-footer-about>small{font-size:8px;margin-top:12px}.compact-footer-contact{border-left:0;border-top:1px solid #ffffff20;padding:20px 0 0;gap:15px}.compact-footer-contact>a{font-size:12px;gap:12px}.compact-footer-navigation{grid-column:auto;display:block;padding:20px 0 0}.compact-footer-navigation>nav{font-size:10px;gap:15px 22px;flex-wrap:wrap}.compact-footer .zalo-control{margin-top:20px;gap:12px;max-width:260px}.compact-footer .zalo-control>small{max-width:none;font-size:8px}.compact-footer .zalo-button{min-width:83px;min-height:39px;font-size:11px}
+  }
+}
