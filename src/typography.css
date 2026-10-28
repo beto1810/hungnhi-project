@@ -1,0 +1,125 @@
+/* Shared reading scale, applied after the existing responsive layers. */
+@layer typography {
+  :root{--copy-size:16px;--small-size:14px;--meta-size:12px;--label-size:14px}
+  body{font-family:'Be Vietnam Pro',sans-serif;font-size:16px;line-height:1.8}
+  .company-logo{display:block;width:100%;height:auto;aspect-ratio:4053/848;flex-shrink:0}
+  .logo-link{width:245px;gap:0}
+  .header-main{height:96px;gap:24px}
+  .site-header nav{font-size:16px;font-weight:600;gap:24px}
+  .header-actions{gap:12px}.header-quote{font-size:15px;font-weight:600;gap:10px;padding:14px 17px}
+  .topbar,.topbar .container{font-size:12px}.topbar .container{min-height:34px;height:auto;padding-top:5px;padding-bottom:5px;gap:18px}
+  .topbar .container>span{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.topbar .container>div{flex-shrink:0}
+  .eyebrow{font-size:14px;line-height:1.6;letter-spacing:.1em;font-weight:600}
+  .text-link{font-size:16px;line-height:1.6}
+  .button{font-size:16px;font-weight:600;line-height:1.6;min-height:54px;gap:18px;white-space:normal;text-align:center}
+  .mega-links a{font-size:16px}.mega-intro h3{font-size:28px}
+  .hero h1{font-family:'Be Vietnam Pro',sans-serif;font-size:63px;font-weight:700;line-height:1.16;letter-spacing:-.045em}
+  .hero .eyebrow{font-size:14px;font-weight:600;line-height:1.65;letter-spacing:.1em;margin-bottom:25px}
+  .hero-description{font-size:17px;line-height:1.8;max-width:535px;margin-top:28px}
+  .hero-description .hero-tagline{font-size:19px;font-weight:600;line-height:1.65;margin-bottom:10px}
+  .hero-copy{padding-top:62px;padding-bottom:50px}.hero-buttons{gap:14px;margin-top:30px}
+  .hero-buttons .button{font-size:16px;padding:15px 22px}
+  .brand-strip p{font-size:12px;line-height:1.8;white-space:normal;flex:0 0 148px}
+  .refined-brands .container>div{gap:26px}.brand-logo-link{height:64px}
+  .brand-logo-link img,.brand-logo-link.logo-total img,.brand-logo-link.logo-makita img,.brand-logo-link.logo-bosch img{width:138px;height:46px;object-fit:contain;object-position:center}
+  .brand-logo-link.logo-bosch img{width:151px}.brand-logo-link.logo-total img{width:132px}.brand-logo-link.logo-makita img{width:128px}
+  .brand-card>.brand-card-image{width:240px;height:88px;object-fit:contain;object-position:center;margin:34px auto}
+  .brand-card>a{font-size:14px;font-weight:600;line-height:1.65}.brand-card>p{font-size:15px;line-height:1.8}.brand-card-number{font-size:13px}
+  .about-copy h2{font-size:41px;line-height:1.35}.about-copy .lead,.story-grid .lead{font-size:20px;line-height:1.7}
+  .about-copy>p:not(.eyebrow):not(.lead),.story-grid p:not(.eyebrow):not(.lead){font-size:16px;line-height:1.85;max-width:520px}
+  .about-principle{font-size:12px;line-height:1.8;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .since-mark>span{font-size:12px;line-height:1.6;letter-spacing:.08em}
+  .strength-item h3{font-size:18px;line-height:1.5}.strength-item p{font-size:14px;line-height:1.8}.strength-number{font-size:12px}
+  .section-heading h2{font-size:40px;line-height:1.35}.section-description{font-size:16px;line-height:1.8;max-width:730px}
+  .category-card{display:flex;flex-direction:column}.category-caption{flex:1;align-items:flex-start;min-height:135px;gap:14px}
+  .category-caption h3{font-size:20px;line-height:1.5}.category-caption>svg{margin-top:5px}
+  .category-caption p{font-size:14px;line-height:1.7;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-height:none;min-height:3.4em}
+  .product-meta{font-size:12px;line-height:1.6;flex-wrap:wrap;letter-spacing:.025em}.product-image>span{font-size:12px}
+  .product-name{font-size:16px;line-height:1.65;height:4.95em}.product-card-bottom>a,.product-card-bottom>button{font-size:14px;line-height:1.6;min-height:36px}
+  .product-bottom-note,.product-bottom-note a{font-size:15px;line-height:1.8;flex-wrap:wrap}
+  .refined-solutions .solution-card{height:auto;display:flex;flex-direction:column}
+  .refined-solutions .solution-card>img{height:195px;flex-shrink:0}
+  .refined-solutions .solution-card>div{position:relative;inset:auto;padding:23px 20px;flex:1;min-height:220px}
+  .refined-solutions .solution-card h3{font-size:20px;line-height:1.5}.refined-solutions .solution-card p{font-size:14px;line-height:1.75;margin-top:10px}
+  .solution-image-note{font-size:12px;line-height:1.8}
+  .consultation-copy h2{font-size:38px;line-height:1.4}.consultation-copy>p:not(.eyebrow){font-size:17px;line-height:1.8;max-width:420px}
+  .consultation-fields>label,.form-grid>label{font-size:15px;font-weight:500;line-height:1.7}
+  .consultation-fields input,.consultation-fields textarea,.form-grid input,.form-grid textarea{font-size:16px;line-height:1.7;padding:12px}
+  .attachment-control>label{font-size:13px;line-height:1.7}.attachment-control>small{font-size:12px;line-height:1.7;padding-left:0}
+  .attachment-control{min-height:88px}.consultation-submit,.inquiry-form>.button{font-size:15px;line-height:1.6;min-height:56px}
+  .consultation-privacy,.consultation-connection,.form-demo-note,.consent{font-size:13px;line-height:1.8}
+  .consultation-message{font-size:14px}.selected-attachments li{font-size:13px}.selected-attachments li>small{font-size:12px}
+  .zalo-button{font-size:16px}.zalo-control>small{font-size:13px}
+  .refined-process .process-step h3{font-size:15px;line-height:1.6;white-space:normal}.refined-process .process-step-copy>span{font-size:24px}
+  .compact-footer-grid{grid-template-columns:1.15fr 1fr 1.2fr;gap:28px}
+  .compact-footer-logo{width:270px;max-width:100%;background:white;padding:12px;display:block;border-radius:2px}
+  .compact-footer-about>p{font-size:14px;line-height:1.8}.compact-footer-about>small{font-size:12px;line-height:1.7}
+  .compact-footer-contact>a{font-size:16px;white-space:normal;overflow-wrap:anywhere}
+  .compact-footer-navigation>nav{font-size:13px;line-height:1.8;gap:14px 20px}
+  .compact-footer .zalo-button{font-size:14px}.compact-footer .zalo-control>small{font-size:11px}
+  .page-intro h1{font-size:52px;line-height:1.3}.page-intro-inner>div>p:not(.eyebrow){font-size:17px;line-height:1.8;max-width:820px}.breadcrumbs{font-size:14px}
+  .story-grid h2{font-size:40px}.story-band p:last-child{font-size:16px;line-height:1.8;max-width:540px}.story-grid figcaption,.photo-pair figcaption{font-size:13px}
+  .values-grid h3{font-size:21px;line-height:1.5}.values-grid p{font-size:15px;line-height:1.8}
+  .catalog-toolbar>p,.catalog-sidebar,.sidebar-group h3,.sidebar-group>label{font-size:15px}
+  .search-field input,.search-field button,.sidebar-group>a,.sidebar-group select,.sidebar-help p,.sidebar-help a,.sort-label,.sort-label select{font-size:14px;line-height:1.7}
+  .sidebar-title h2,.sidebar-help h3{font-size:17px}.sidebar-group>a>span{font-size:12px}.sort-label select{max-width:180px}
+  .collection-banner h2{font-size:33px}.collection-banner p:last-child,.taxonomy-section>p{font-size:14px}
+  .taxonomy-grid summary{font-size:16px}.taxonomy-grid details>p,.taxonomy-grid details>div,.taxonomy-grid details>a{font-size:14px}.taxonomy-grid details>div>span{font-size:13px}
+  .empty-state h2,.taxonomy-section>h2{font-size:27px}.empty-state p,.data-note{font-size:16px;line-height:1.8}
+  .detail-copy h1{font-size:35px;line-height:1.45}.detail-copy>p:not(.eyebrow){font-size:16px;line-height:1.8}.detail-code{font-size:12px}.detail-code strong{font-size:16px}
+  .detail-actions .button{font-size:15px}.detail-support{font-size:14px}.detail-promises>span{font-size:12px}
+  .quote-price>span{font-size:12px}.quote-price h2{font-size:30px}.quote-price p{font-size:14px}
+  .product-spec-table,.product-spec-table.compact{font-size:15px;line-height:1.8}.product-spec-table caption{font-size:22px}.product-spec-table.compact caption{font-size:17px}
+  .product-information h2{font-size:28px}.product-information p,.product-information li{font-size:16px;line-height:1.9}.product-information .spec-source,.image-source-note{font-size:14px}
+  .tabs>button{font-size:16px;line-height:1.7}.source-discrepancy{font-size:14px!important}
+  .solution-wide h2{font-size:32px;line-height:1.5}.solution-wide p:not(.eyebrow),.solution-detail p:not(.eyebrow),.solution-detail li{font-size:16px;line-height:1.85}.solution-wide .text-link{font-size:15px}.solution-detail h2{font-size:39px}
+  .quote-cta h2{font-size:42px;line-height:1.35}.quote-cta p:not(.eyebrow){font-size:16px;line-height:1.8}.cta-phone small{font-size:13px}
+  .contact-information>h2{font-size:39px}.contact-block h3{font-size:16px}.contact-block p{font-size:16px;line-height:1.8;max-width:430px}.contact-block .text-link{font-size:14px}.contact-block:nth-of-type(2) a{font-size:19px;overflow-wrap:anywhere}
+  .contact-form-panel>h2{font-size:32px}.contact-form-panel>p:not(.eyebrow),.quote-form-panel>p,.quote-empty p,.quote-help p{font-size:15px;line-height:1.8}
+  .quote-list-heading h2{font-size:23px}.quote-list-heading>a{font-size:14px}.quote-item-code{font-size:12px}.quote-item-name{font-size:15px}.quantity-control input{font-size:14px}.quote-form-panel>h2{font-size:29px}
+  .article-card>p:last-child,.article-body section p{font-size:16px}.article-tag{font-size:12px}.article-card h3{font-size:22px}.illustration-label{font-size:10px}.toast{font-size:15px}
+  @media(min-width:1550px){.hero h1{font-size:72px}.hero-description{font-size:18px}.hero-copy{width:60%}}
+  @media(max-width:1250px){.header-main{gap:18px}.logo-link{width:225px}.site-header nav{gap:18px}.header-quote{padding:13px;font-size:14px}.compact-footer-navigation{flex-wrap:wrap}}
+  @media(max-width:1150px){.hero h1{font-size:55px}.hero-copy{width:64%}.hero-description{max-width:500px}.about-grid{gap:45px}.about-copy h2{font-size:36px}.brand-strip p{flex-basis:130px}.refined-brands .container>div{gap:20px}}
+  @media(max-width:1100px){
+    .site-header nav{display:none;position:absolute;top:96px;left:0;right:0;background:white;padding:16px 30px 24px;box-shadow:0 15px 20px #1b255b15;flex-direction:column;align-items:stretch;gap:0;font-size:17px;max-height:calc(100dvh - 140px);overflow:auto}
+    .site-header nav.nav-open{display:flex}.site-header nav a{padding:12px 0}.nav-product-row{justify-content:space-between}.mobile-menu{display:grid}.header-quote{font-size:15px}.header-quote span{font-size:13px}.header-actions{margin-left:auto}.search-trigger{display:none}
+    .mega-menu{position:absolute;top:100%;max-height:calc(100dvh - 150px);overflow:auto}.mega-menu .container{display:block}.mega-intro{display:none}.mega-links{grid-template-columns:1fr 1fr}
+    .solution-grid{grid-template-columns:1fr 1fr}.contact-grid,.quotation-grid{grid-template-columns:1fr;gap:45px}
+  }
+  @media(max-width:900px){
+    .hero h1{font-size:47px}.hero-copy{width:68%}.hero-description{font-size:16px;max-width:450px}.hero-buttons .button{font-size:14px;padding:14px 17px;gap:12px}
+    .about-copy h2{font-size:32px}.about-copy .lead,.story-grid .lead{font-size:18px}.about-copy>p:not(.eyebrow):not(.lead){font-size:15px}.section-heading h2{font-size:35px}
+    .brand-strip .container{display:grid;grid-template-columns:1fr;gap:20px}.brand-strip p{width:auto;flex-basis:auto;font-size:12px;display:block}.brand-strip .container>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px}.brand-strip .container>a{display:none}
+    .category-caption{padding:18px 14px;min-height:145px}.category-caption h3{font-size:18px}.category-caption p{font-size:13px}
+    .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-name{font-size:15px}.product-card-bottom>a,.product-card-bottom>button{font-size:13px}
+    .consultation-layout{grid-template-columns:1fr;gap:30px}.consultation-copy h2{font-size:34px}.consultation-copy>p:not(.eyebrow){font-size:16px;max-width:600px}
+    .refined-process .process-grid{grid-template-columns:1fr 1fr;gap:26px}.refined-process .process-step h3{font-size:15px}.refined-process .process-step>.process-arrow{display:none}
+    .compact-footer-grid{grid-template-columns:1fr 1fr}.compact-footer-navigation{grid-column:1/-1}.compact-footer-navigation>nav{font-size:14px}
+    .page-intro h1{font-size:43px}.page-intro-inner>div>p:not(.eyebrow){font-size:16px}.detail-copy h1{font-size:31px}.detail-promises>span{font-size:13px}.solution-detail h2{font-size:33px}
+  }
+  @media(max-width:680px){
+    .header-main{height:80px;gap:12px}.logo-link{width:184px}.site-header nav{top:80px;padding:15px 22px 24px}.header-quote{font-size:0;padding:12px;gap:0}.header-quote span{font-size:12px;margin-right:7px}.header-actions{gap:7px}.topbar .container{font-size:11px;gap:12px}.topbar .container>span{max-width:none}.topbar .container>div>span{display:none}
+    .hero{display:flex;flex-direction:column;min-height:0}.hero-content{order:1;width:100%;min-height:0;align-items:flex-start}.hero-copy{width:100%;padding:38px 0 36px}.hero-photo{position:relative;inset:auto;order:2;width:100%;height:330px;flex:none}.hero-bottom-line{order:3;flex:none}.hero h1{font-size:44px;line-height:1.18;letter-spacing:-.045em}.hero .eyebrow{font-size:12px;letter-spacing:.08em;margin-bottom:22px}.hero-description{font-size:15px;line-height:1.8;max-width:100%;margin-top:22px}.hero-description .hero-tagline{font-size:18px;line-height:1.65}.hero-buttons{gap:12px;flex-wrap:wrap;margin-top:25px}.hero-buttons .button{font-size:14px;padding:13px 16px;min-height:50px;gap:12px}.hero-gallery-controls{right:22px;bottom:22px}
+    .eyebrow{font-size:12px}.text-link{font-size:15px}.button{font-size:15px;min-height:52px;padding:14px 18px}
+    .brand-strip .container>div{gap:20px 16px}.brand-logo-link{height:44px}.brand-logo-link img,.brand-logo-link.logo-total img,.brand-logo-link.logo-makita img,.brand-logo-link.logo-bosch img{width:100px;height:36px}.brand-strip p{font-size:12px;line-height:1.7}
+    .about-copy h2{font-size:34px}.about-copy .lead{font-size:18px}.about-copy .text-link{font-size:15px}.about-principle{font-size:11px;gap:10px 18px;flex-wrap:wrap;justify-content:flex-start}.since-mark>span{font-size:11px}.since-mark{min-width:155px}
+    .strength-item h3{font-size:16px}.strength-item p{font-size:13px}.section-heading h2{font-size:33px}.section-description{font-size:15px}.section-heading>.text-link{font-size:14px}
+    .category-caption{padding:16px 12px;min-height:160px;gap:8px}.category-caption h3{font-size:16px;line-height:1.45}.category-caption p{font-size:12px;line-height:1.75;min-height:3.5em;max-height:none}.category-caption>svg{width:16px;margin-top:4px}
+    .product-info{padding:15px 11px}.product-meta{font-size:10px;gap:4px 8px}.product-name{font-size:14px;line-height:1.65;height:4.95em}.product-image>span{font-size:10px}.product-card-bottom{display:grid;grid-template-columns:1fr 1fr;gap:6px}.product-card-bottom>a,.product-card-bottom>button{font-size:12px;gap:3px;justify-content:center}.product-card-bottom svg{width:12px}.product-bottom-note,.product-bottom-note a{font-size:14px}
+    .refined-solutions .solution-card>img{height:165px}.refined-solutions .solution-card>div{padding:19px 14px;min-height:220px}.refined-solutions .solution-card h3{font-size:18px;line-height:1.45}.refined-solutions .solution-card p{font-size:13px;line-height:1.75}.solution-image-note{font-size:11px;text-align:left}
+    .consultation-copy h2{font-size:34px}.consultation-copy>p:not(.eyebrow){font-size:16px}.consultation-copy .eyebrow{font-size:12px}.consultation-fields>label{font-size:15px}.consultation-fields input,.consultation-fields textarea{font-size:16px}.consultation-actions{grid-template-columns:1fr}.attachment-control>label{font-size:14px}.attachment-control>small{font-size:12px}.consultation-submit{font-size:15px}.consultation-privacy,.consultation-connection{font-size:12px}.zalo-button{font-size:15px}.zalo-control>small{font-size:12px}
+    .refined-process .process-step h3{font-size:13px;line-height:1.6}.refined-process .process-step-copy>span{font-size:22px}
+    .compact-footer-grid{grid-template-columns:1fr}.compact-footer-navigation{grid-column:auto}.compact-footer-about>p{font-size:14px;max-width:100%}.compact-footer-contact>a{font-size:16px}.compact-footer-about>small{font-size:12px}.compact-footer-navigation>nav{font-size:14px}.compact-footer .zalo-control>small{font-size:12px}.compact-footer .zalo-button{font-size:14px}
+    .page-intro h1{font-size:36px;line-height:1.35}.page-intro .eyebrow{font-size:12px}.page-intro-inner>div>p:not(.eyebrow){font-size:15px;line-height:1.85}.breadcrumbs{font-size:12px}
+    .story-grid h2{font-size:33px}.story-grid .lead{font-size:18px}.story-grid p:not(.eyebrow):not(.lead),.story-band p:last-child{font-size:15px;max-width:100%}.story-band h2{font-size:35px}.values-grid h3{font-size:18px}.values-grid p{font-size:14px}.photo-pair figcaption,.story-grid figcaption{font-size:12px}
+    .catalog-results .catalog-toolbar{flex-wrap:wrap;gap:14px}.catalog-results .catalog-toolbar>p{font-size:13px;max-width:none}.sort-label{font-size:13px}.sort-label select{font-size:14px;max-width:180px}.search-field input,.catalog-search>button,.sidebar-group select{font-size:16px}.sidebar-title h2{font-size:16px}.sidebar-group>label{font-size:14px}
+    .collection-banner h2{font-size:30px}.collection-banner .eyebrow{font-size:11px}.collection-banner p:last-child{font-size:13px}.empty-state h2{font-size:25px}.empty-state p,.data-note{font-size:14px}.empty-state .button{font-size:14px}.taxonomy-grid summary{font-size:16px}
+    .detail-copy h1{font-size:30px}.detail-copy .eyebrow{font-size:12px}.detail-copy>p:not(.eyebrow){font-size:15px}.detail-actions .button{font-size:15px}.detail-support{font-size:14px}.detail-promises>span{font-size:12px}.quote-price h2{font-size:29px}.quote-price>span{font-size:12px}.quote-price p{font-size:14px}
+    .product-spec-table,.product-spec-table.compact{font-size:14px}.product-spec-table caption{font-size:19px}.product-spec-table.compact caption{font-size:17px}.product-information h2{font-size:25px}.product-information p,.product-information li{font-size:15px;line-height:1.85}.product-information .spec-source,.product-information .text-link,.image-source-note{font-size:13px}.tabs>button{font-size:13px;padding:16px 0}.source-discrepancy{font-size:13px!important}
+    .brand-card>a{font-size:14px}.brand-card>.brand-card-image{height:85px;width:240px}.solution-wide h2{font-size:30px}.solution-wide .eyebrow{font-size:12px}.solution-detail h2{font-size:33px}.solution-detail p:not(.eyebrow),.solution-detail li{font-size:15px}
+    .quote-cta h2{font-size:35px}.quote-cta p:not(.eyebrow){font-size:15px}.cta-phone small{font-size:13px}.contact-information>h2{font-size:34px}.contact-block h3{font-size:15px}.contact-block p{font-size:15px}.contact-block:nth-of-type(2) a{font-size:18px}.contact-form-panel>h2{font-size:29px}.contact-form-panel>p:not(.eyebrow){font-size:15px}.form-grid>label{font-size:15px}.form-grid input,.form-grid textarea{font-size:16px}.form-demo-note,.consent{font-size:12px}.inquiry-form>.button{font-size:15px}
+    .quote-list-heading{flex-wrap:wrap;gap:10px}.quote-list-heading h2{font-size:22px}.quote-list-heading>a{font-size:13px}.quote-item-name{font-size:14px}.quote-item-code{font-size:11px}.quote-form-panel>h2{font-size:29px}.quote-help p,.quote-empty p{font-size:14px}.quote-empty h3{font-size:23px}.quote-form-panel>p{font-size:15px}.toast{font-size:14px;overflow-wrap:anywhere}
+  }
+  @media(max-width:360px){.logo-link{width:174px}.header-main{gap:9px}.header-actions{gap:4px}.hero h1{font-size:44px}.product-grid{grid-template-columns:1fr}.product-card-bottom{display:flex;justify-content:space-between}.hero-buttons .button{width:100%}.solution-grid{grid-template-columns:1fr}.refined-process .process-grid{grid-template-columns:1fr}}
+}
