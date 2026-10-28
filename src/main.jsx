@@ -10,6 +10,7 @@ import './pages.css';
 import './product-gallery.css';
 import './homepage-refinement.css';
 import './typography.css';
+import './category-navigation.css';
 import App from './App.jsx';
 
 // Hash routing lets shared interior links reload on GitHub's static hosting.

@@ -1,0 +1,34 @@
+.products-menu-trigger{display:flex;align-items:center;gap:7px;font:inherit;color:var(--navy);min-height:44px}
+.products-menu-trigger[aria-expanded="true"]{color:var(--blue)}
+.mega-menu{max-height:calc(100dvh - 140px);overflow:auto}
+.mega-links{display:block;min-width:0}
+.mega-links .category-navigation{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 24px;align-items:start}
+.category-navigation>details,.category-navigation>a{border-bottom:1px solid var(--line)}
+.category-navigation summary,.category-navigation>a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;list-style:none;font-size:15px;line-height:1.6;color:var(--navy);cursor:pointer}
+.category-navigation summary::-webkit-details-marker{display:none}
+.category-navigation summary svg,.category-navigation>a svg{flex-shrink:0}
+.category-navigation details[open]>summary{color:var(--blue);font-weight:600}
+.category-navigation details[open]>summary svg{transform:rotate(180deg)}
+.category-submenu{padding:0 0 12px 12px;border-left:2px solid var(--line);margin-bottom:10px}
+.category-submenu>a{display:block;padding:9px 10px;font-size:14px;line-height:1.6;border:0;color:var(--muted)}
+.category-navigation a:hover,.category-navigation a.filter-active{color:var(--blue);background:var(--pale)}
+.category-navigation a.filter-active{font-weight:600}
+.category-current>summary{color:var(--blue)}
+.catalog-sidebar .sidebar-group:nth-child(2){display:block}
+.category-navigation :is(a,summary):focus-visible,.products-menu-trigger:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:1100px){
+  .mega-menu{position:absolute;top:100%;max-height:calc(100dvh - 130px)}
+  .site-header:has(.mega-menu) nav.nav-open{position:static;box-shadow:none}
+  .header-main:has(nav.nav-open){height:auto;min-height:72px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+  .header-main:has(nav.nav-open) nav{order:3;width:100%}
+  .mega-menu .container{display:block;padding-top:18px;padding-bottom:20px}
+  .mega-intro h3,.mega-intro .eyebrow{display:none}
+  .mega-intro{display:block;margin-bottom:14px}
+  .mega-links .category-navigation{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+  .mega-menu{max-height:55dvh}
+  .mega-links .category-navigation{grid-template-columns:1fr}
+  .products-menu-trigger{width:100%;justify-content:space-between;padding:12px 0}
+  .category-navigation summary,.category-navigation>a{font-size:15px}
+}
