@@ -24,6 +24,7 @@
   .brand-logo-link img,.brand-logo-link.logo-total img,.brand-logo-link.logo-makita img,.brand-logo-link.logo-bosch img{width:166px;height:60px;object-fit:contain;object-position:center}
   .brand-logo-link.logo-bosch img{width:180px}.brand-logo-link.logo-total img{width:158px}.brand-logo-link.logo-makita img{width:154px}.brand-logo-link.logo-asaki img{width:160px;height:60px;object-fit:contain}
   .brand-card>.brand-card-image{width:calc(100% + 32px);max-width:none;height:144px;object-fit:contain;object-position:center;margin:28px -16px 34px}.brand-card[data-brand="DCA"]>.brand-card-image{width:280px;max-width:100%;margin-left:auto;margin-right:auto}
+  .brand-logo-link img,.brand-card>.brand-card-image{transform:scale(.85);transform-origin:center}
   .brand-card>a{font-size:14px;font-weight:600;line-height:1.65}.brand-card>p{font-size:15px;line-height:1.8}.brand-card-number{font-size:13px}
   .about-copy h2{font-size:41px;line-height:1.35}.about-copy .lead,.story-grid .lead{font-size:20px;line-height:1.7}
   .about-copy>p:not(.eyebrow):not(.lead),.story-grid p:not(.eyebrow):not(.lead){font-size:16px;line-height:1.85;max-width:520px}
