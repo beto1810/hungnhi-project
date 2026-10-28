@@ -71,7 +71,7 @@ export default function ConsultationForm() {
   }
 
   return <section className="consultation-section" id="tu-van-bao-gia" aria-labelledby="consultation-title"><div className="container consultation-layout">
-    <div className="consultation-copy"><p className="eyebrow">TƯ VẤN & BÁO GIÁ</p><h2 id="consultation-title">Gửi nhu cầu,<br/>nhận tư vấn báo giá.</h2><p>Có mã hàng, danh sách vật tư hoặc chỉ có hình ảnh? Hãy gửi để chúng tôi hỗ trợ đối chiếu.</p><ZaloLink/></div>
+    <div className="consultation-copy"><p className="eyebrow">TƯ VẤN & BÁO GIÁ</p><h2 id="consultation-title">Gửi nhu cầu,<br/>nhận tư vấn báo giá</h2><p>Có mã hàng, danh sách vật tư hoặc chỉ có hình ảnh? Hãy gửi để chúng tôi hỗ trợ đối chiếu.</p><ZaloLink/></div>
     <form className="consultation-form" onSubmit={submit} aria-label="Form tư vấn báo giá" aria-busy={isSending}>
       <fieldset disabled={isSending}>
         <div className="consultation-fields"><label htmlFor={inputId('name')}>Họ và tên <span>*</span><input id={inputId('name')} required name="name" autoComplete="name" maxLength={100} value={fields.name} onChange={update} placeholder="Họ và tên của bạn"/></label><label htmlFor={inputId('phone')}>Số điện thoại <span>*</span><input id={inputId('phone')} required type="tel" name="phone" autoComplete="tel" pattern="[+0-9 ()-]{8,20}" maxLength={20} value={fields.phone} onChange={update} placeholder="Số điện thoại liên hệ"/></label>
