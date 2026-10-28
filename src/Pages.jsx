@@ -55,7 +55,7 @@ export function ProductDetail({ addQuote, quote }) {
 
 export function Brands() {
   const [params]=useSearchParams();
-  return <><PageIntro eyebrow="THƯƠNG HIỆU" title={<>Tìm theo thương hiệu.<br/>Đối chiếu đúng mã hàng.</>} description="Đa dạng máy móc, dụng cụ và vật tư từ nhiều thương hiệu, đáp ứng nhu cầu từ sửa chữa dân dụng đến thi công và sản xuất." breadcrumb={[{label:'Thương hiệu'}]}/><section className="section"><div className="container brand-cards">{brands.map((b,i)=><article key={b} className={params.get('brand')===b?'brand-card highlighted':'brand-card'}><span className="brand-card-number">0{i+1}</span><img className="brand-card-image" src={brandLogos[b]} alt={b}/><Link to={`/san-pham?brand=${b}`}>Xem danh mục theo thương hiệu<ArrowUpRight size={18}/></Link></article>)}</div></section><QuoteCTA/></>;
+  return <><PageIntro eyebrow="THƯƠNG HIỆU" title={<>Tìm theo thương hiệu.<br/>Đối chiếu đúng mã hàng.</>} description="Đa dạng máy móc, dụng cụ và vật tư từ nhiều thương hiệu, đáp ứng nhu cầu từ sửa chữa dân dụng đến thi công và sản xuất." breadcrumb={[{label:'Thương hiệu'}]}/><section className="section"><div className="container brand-cards">{brands.map(b=><article key={b} data-brand={b} className={params.get('brand')===b?'brand-card highlighted':'brand-card'}><img className="brand-card-image" src={brandLogos[b]} alt={b}/><Link to={`/san-pham?brand=${b}`}>Xem danh mục theo thương hiệu<ArrowUpRight size={18}/></Link></article>)}</div></section><QuoteCTA/></>;
 }
 
 export function Solutions() {
