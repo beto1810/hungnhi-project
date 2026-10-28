@@ -6,8 +6,8 @@ import { categories } from './catalogData.js';
 import { ZaloLink } from './ConsultationForm.jsx';
 
 export const contact = { phone: '0918 539 848', phones: ['0918 539 848','0919 661 900','0918 682 900'], email: 'hungnhi0306@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
-export const brands = ['TOTAL', 'WADFOW', 'INGCO', 'DCA', 'BOSCH', 'MAKITA'];
-export const brandLogos = { TOTAL: assetUrl('/assets/brand-logos/total.png'), WADFOW: assetUrl('/assets/brand-logos/wadfow.png'), INGCO: assetUrl('/assets/brand-logos/ingco.png'), DCA: assetUrl('/assets/brand-logos/dca.png'), BOSCH: assetUrl('/assets/brand-logos/bosch.png'), MAKITA: assetUrl('/assets/brand-logos/makita.png') };
+export const brands = ['TOTAL', 'WADFOW', 'ASAKI', 'DCA', 'BOSCH', 'MAKITA'];
+export const brandLogos = { TOTAL: assetUrl('/assets/brand-logos/total.png'), WADFOW: assetUrl('/assets/brand-logos/wadfow.png'), ASAKI: assetUrl('/assets/brand-logos/asaki.svg'), DCA: assetUrl('/assets/brand-logos/dca.png'), BOSCH: assetUrl('/assets/brand-logos/bosch.png'), MAKITA: assetUrl('/assets/brand-logos/makita.png') };
 export const storefrontPhoto = assetUrl('/assets/retouched/storefront-unnamed1-clean-v2.webp');
 export function BrandLogo(){return <svg className="company-logo" viewBox="454 1330 4053 848" role="img" aria-label="Công ty TNHH TM DV Hùng Nhi" preserveAspectRatio="xMidYMid meet"><image href={assetUrl('/assets/logo/hung-nhi-company-original.png')} width="4961" height="3508"/></svg>;}
 export function Button({ to, href, children, secondary = false, light = false, className = '', ...props }) {
