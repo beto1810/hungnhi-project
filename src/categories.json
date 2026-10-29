@@ -4,24 +4,38 @@
     "name": "Máy móc & Thiết bị",
     "children": [],
     "image": "/assets/warehouse-tools.webp",
-    "aliases": [],
+    "aliases": [
+      "may-bom-ong-mem-loc"
+    ],
     "description": "Tìm sản phẩm theo tên hoặc mã hàng"
   },
   {
     "id": "dung-cu-co-khi",
-    "name": "Dụng cụ & Cơ khí",
+    "name": "Dụng cụ & Thiết bị cơ khí",
     "children": [
       {
         "name": "Dụng cụ cầm tay"
       },
       {
         "name": "Dụng cụ cắt gọt"
+      },
+      {
+        "name": "Thang"
+      },
+      {
+        "name": "Kệ & Tủ dụng cụ"
+      },
+      {
+        "name": "Xe đẩy & Dụng cụ vận chuyển"
       }
     ],
     "image": "/assets/tools-wall.webp",
     "aliases": [
       "dung-cu-cam-tay",
-      "do-luong-kiem-tra"
+      "do-luong-kiem-tra",
+      "thang-ke-xe-day",
+      "tu-ke-luu-tru",
+      "xay-dung-cong-trinh"
     ]
   },
   {
@@ -35,7 +49,7 @@
         "name": "Thiết bị đóng cắt & Điều khiển"
       },
       {
-        "name": "Thiết bị chiếu sáng"
+        "name": "Chiếu sáng"
       },
       {
         "name": "Ổ cắm & Phích cắm"
@@ -52,16 +66,16 @@
     "name": "Ống nước & Phụ kiện",
     "children": [
       {
-        "name": "Ống nhựa"
+        "name": "Ống PVC & Phụ kiện"
       },
       {
-        "name": "Ống kim loại"
+        "name": "Ống HDPE & Phụ kiện"
       },
       {
-        "name": "Phụ kiện nối ống"
+        "name": "Ống PPR & Phụ kiện"
       },
       {
-        "name": "Phụ kiện lắp đặt đường ống"
+        "name": "Ống & Phụ kiện khác"
       }
     ],
     "image": "/assets/pipe-stock.webp",
@@ -86,7 +100,7 @@
         "name": "Van một chiều"
       },
       {
-        "name": "Van điều khiển & Van chuyên dụng"
+        "name": "Van khác"
       }
     ],
     "image": "/assets/steel-stock.webp",
@@ -100,19 +114,22 @@
         "name": "Bulông"
       },
       {
-        "name": "Đai ốc"
+        "name": "Đai ốc (Tán)"
       },
       {
-        "name": "Long đền"
+        "name": "Long đền (Vòng đệm)"
       },
       {
-        "name": "Vít"
+        "name": "Vít các loại"
       },
       {
         "name": "Tắc kê"
       },
       {
         "name": "Ty ren"
+      },
+      {
+        "name": "Phụ kiện liên kết"
       }
     ],
     "image": "/assets/steel-stock.webp",
@@ -121,14 +138,11 @@
     ]
   },
   {
-    "id": "thiet-bi-vat-tu-han",
-    "name": "Thiết bị & Vật tư hàn",
+    "id": "vat-tu-phu-kien-han",
+    "name": "Vật tư & Phụ kiện hàn",
     "children": [
       {
-        "name": "Máy hàn"
-      },
-      {
-        "name": "Vật liệu hàn"
+        "name": "Que hàn & Dây hàn"
       },
       {
         "name": "Phụ kiện hàn"
@@ -136,7 +150,8 @@
     ],
     "image": "/assets/hand-tools.webp",
     "aliases": [
-      "han-cat-mai"
+      "han-cat-mai",
+      "thiet-bi-vat-tu-han"
     ]
   },
   {
@@ -150,7 +165,7 @@
         "name": "Keo & Chất trám kín"
       },
       {
-        "name": "Hóa chất bảo trì & Công nghiệp"
+        "name": "Hóa chất công nghiệp"
       }
     ],
     "image": "/assets/paint-stock.webp",
@@ -177,23 +192,6 @@
     "illustrative": true
   },
   {
-    "id": "may-bom-ong-mem-loc",
-    "name": "Máy bơm – Ống mềm – Lọc",
-    "children": [
-      {
-        "name": "Máy bơm"
-      },
-      {
-        "name": "Ống mềm công nghiệp"
-      },
-      {
-        "name": "Thiết bị lọc"
-      }
-    ],
-    "image": "/assets/pipe-stock.webp",
-    "aliases": []
-  },
-  {
     "id": "day-curoa-bac-dan",
     "name": "Dây curoa – Bạc đạn",
     "children": [
@@ -202,32 +200,28 @@
       },
       {
         "name": "Vòng bi & Gối đỡ"
-      },
-      {
-        "name": "Puly & Phụ kiện truyền động"
       }
     ],
     "image": "/assets/steel-stock.webp",
     "aliases": []
   },
   {
-    "id": "thang-ke-xe-day",
-    "name": "Thang – Kệ – Xe đẩy",
+    "id": "vat-tu-phu-kien-cong-nghiep",
+    "name": "Vật tư & Phụ kiện công nghiệp",
     "children": [
       {
-        "name": "Thang"
+        "name": "Gioăng – Phớt – Vật liệu làm kín"
       },
       {
-        "name": "Kệ & Tủ dụng cụ"
+        "name": "Khí nén & Phụ kiện"
       },
       {
-        "name": "Xe đẩy & Thiết bị vận chuyển"
+        "name": "Vật tư công nghiệp khác"
       }
     ],
     "image": "/assets/shop-interior.webp",
     "aliases": [
-      "tu-ke-luu-tru",
-      "xay-dung-cong-trinh"
+      "thiet-bi-cong-nghiep"
     ]
   },
   {
@@ -235,9 +229,7 @@
     "name": "Sản phẩm khác",
     "children": [],
     "image": "/assets/shop-interior.webp",
-    "aliases": [
-      "thiet-bi-cong-nghiep"
-    ],
+    "aliases": [],
     "description": "Tìm sản phẩm theo tên hoặc mã hàng"
   }
 ]
