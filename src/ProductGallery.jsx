@@ -30,5 +30,5 @@ export function SpecificationTable({ rows, caption, compact=false }) {
 }
 
 export function ProductSpecifications({ product }) {
-  return <><h2>Thông tin chi tiết sản phẩm</h2><p className="spec-source">Thông tin theo mã {product.sku}, ghi nhận từ website Hùng Nhi. Cấu hình đi kèm sẽ được đối chiếu khi báo giá.</p>{product.specSections?.length?product.specSections.map((section,index)=><section className="spec-section" key={`${section.title}-${index}`}><SpecificationTable caption={section.title} rows={section.rows}/></section>):<p>Chưa có thông số kỹ thuật đã xác nhận cho mã này. Vui lòng liên hệ để đối chiếu.</p>}</>;
+  return <><h2 id="product-description-heading">Thông tin chi tiết sản phẩm</h2><p className="product-description-text">{product.sourceText || 'Vui lòng liên hệ Hùng Nhi để được hỗ trợ thông tin chi tiết sản phẩm.'}</p></>;
 }
