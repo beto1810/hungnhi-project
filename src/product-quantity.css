@@ -21,3 +21,10 @@
   .product-card .card-quantity-control { flex-basis: 112px; }
   .product-card .product-quote-button { font-size: 14px; }
 }
+
+.header-actions .header-quote { gap: 8px; }
+.header-actions .header-quote svg { width: 20px; height: 20px; flex-shrink: 0; }
+.header-actions .header-quote span { margin-right: 0; }
+
+.header-actions .header-quote .header-quote-label { display: inline; background: transparent; padding: 0; margin: 0; min-width: 0; font: inherit; white-space: nowrap; }
+@media (max-width: 680px) { .header-actions .header-quote .header-quote-label { display: none; } }

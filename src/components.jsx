@@ -1,7 +1,7 @@
 import { assetUrl } from './assets.js';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight, Phone, Search, Menu, X, ChevronDown, Mail, PackageCheck, ClipboardList, Ruler, Truck, Check, Plus } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Phone, Search, Menu, X, ChevronDown, Mail, PackageCheck, ClipboardList, Ruler, Truck, Check, Plus, ShoppingCart } from 'lucide-react';
 import { categories } from './catalogData.js';
 import { ZaloLink } from './ConsultationForm.jsx';
 import { MAX_QUOTE_QUANTITY, normalizeQuantity } from './quoteQuantity.js';
@@ -48,7 +48,7 @@ export function Header({ quoteCount }) {
     <header className="site-header" ref={headerRef}><div className="container header-main"><Link to="/" onClick={close} aria-label="Hùng Nhi — Trang chủ" className="logo-link"><BrandLogo/></Link><nav aria-label="Điều hướng chính" className={open ? 'nav-open' : ''}>
       <NavLink to="/gioi-thieu" onClick={close}>Giới thiệu</NavLink><div className="products-nav"><div className="nav-product-row"><button className="products-menu-trigger" aria-controls="product-menu" aria-expanded={mega} onClick={()=>setMega(!mega)}>Sản phẩm<ChevronDown size={16}/></button></div></div>
       <NavLink to="/thuong-hieu" onClick={close}>Thương hiệu</NavLink><NavLink to="/giai-phap" onClick={close}>Giải pháp</NavLink><NavLink to="/lien-he" onClick={close}>Liên hệ</NavLink>
-    </nav><div className="header-actions"><button className="icon-button search-trigger" aria-label="Tìm sản phẩm" onClick={()=>{navigate('/san-pham?focus=search');close();}}><Search size={21}/></button><Link className="header-quote" to="/bao-gia" onClick={close}>Yêu cầu báo giá {quoteCount > 0 && <span>{quoteCount}</span>}<ArrowUpRight size={17}/></Link><button className="icon-button mobile-menu" aria-expanded={open} aria-label={open?'Đóng menu':'Mở menu'} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></div>
+    </nav><div className="header-actions"><button className="icon-button search-trigger" aria-label="Tìm sản phẩm" onClick={()=>{navigate('/san-pham?focus=search');close();}}><Search size={21}/></button><Link className="header-quote" to="/bao-gia" onClick={close} aria-label={`Giỏ hàng báo giá, ${quoteCount} mã sản phẩm`}><ShoppingCart size={20} aria-hidden="true"/><span className="header-quote-label">Yêu cầu báo giá</span>{quoteCount > 0 && <span className="header-quote-count">{quoteCount}</span>}</Link><button className="icon-button mobile-menu" aria-expanded={open} aria-label={open?'Đóng menu':'Mở menu'} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></div>
       {mega && <div className="mega-menu" id="product-menu"><div className="container"><div className="mega-intro"><p className="eyebrow">DANH MỤC VẬT TƯ</p><h3>Tìm đúng nhóm<br/>Chọn đúng sản phẩm</h3><Link to="/san-pham" onClick={close} className="text-link">Tất cả sản phẩm<ArrowRight size={17}/></Link></div><div className="mega-links"><CategoryNavigation onNavigate={close}/></div></div></div>}
     </header></>;
 }
