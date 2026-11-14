@@ -4,6 +4,8 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight, Phone, Search, Menu, X, ChevronDown, Mail, PackageCheck, ClipboardList, Ruler, Truck, Check, Plus } from 'lucide-react';
 import { categories } from './catalogData.js';
 import { ZaloLink } from './ConsultationForm.jsx';
+import { MAX_QUOTE_QUANTITY, normalizeQuantity } from './quoteQuantity.js';
+import './product-quantity.css';
 
 export const contact = { phone: '0918 539 848', phones: ['0918 539 848','0919 661 900','0918 682 900'], email: 'hungnhi0306@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
 export const brands = ['TOTAL', 'WADFOW', 'ASAKI', 'DCA', 'BOSCH', 'MAKITA'];
@@ -57,7 +59,15 @@ export function QuoteCTA() {
   return <section className="quote-cta"><div className="container"><div><p className="eyebrow">LIÊN HỆ HÙNG NHI</p><h2>Để việc chọn vật tư<br/>trở nên đơn giản hơn</h2><p>Gửi sản phẩm bạn cần hoặc công việc bạn đang thực hiện.<br/>Hùng Nhi sẽ hỗ trợ lựa chọn và báo giá phù hợp.</p></div><div><Button to="/bao-gia" light>Gửi yêu cầu báo giá</Button><a className="cta-phone" href="tel:0918539848"><Phone size={21}/><span><small>Hoặc trao đổi trực tiếp</small>{contact.phone}</span></a></div></div></section>;
 }
 export function ProductCard({ product, addQuote, selected }) {
-  return <article className="product-card"><Link className="product-image" to={`/san-pham/${product.id}`} aria-label={`Xem ${product.name}`}><img src={product.image} alt={product.name} loading="lazy"/><span>{product.brand}</span></Link><div className="product-info"><div className="product-meta"><span>{product.brand}</span><span>{product.sku}</span></div><Link to={`/san-pham/${product.id}`} className="product-name">{product.name.replace(/\s*TOTAL\s*-\s*\w+$/, '')}</Link><div className="product-card-bottom"><Link to={`/san-pham/${product.id}`}>Chi tiết<ArrowUpRight size={14}/></Link><button onClick={()=>addQuote(product)} className={selected?'selected':''} aria-label={selected?`${product.sku} đã trong yêu cầu`:`Thêm ${product.sku} vào yêu cầu báo giá`}>{selected?<Check size={16}/>:<Plus size={16}/>}<span>{selected?'Đã thêm':'Báo giá'}</span></button></div></div></article>;
+  const [quantity, setQuantity] = useState(1);
+  const amount = normalizeQuantity(quantity);
+  return <article className="product-card"><Link className="product-image" to={`/san-pham/${product.id}`} aria-label={`Xem ${product.name}`}><img src={product.image} alt={product.name} loading="lazy"/><span>{product.brand}</span></Link><div className="product-info"><div className="product-meta"><span>{product.brand}</span><span>{product.sku}</span></div><Link to={`/san-pham/${product.id}`} className="product-name">{product.name.replace(/\s*TOTAL\s*-\s*\w+$/, '')}</Link>
+    <div className="product-quantity-row"><span>Số lượng</span><div className="card-quantity-control" role="group" aria-label={`Chọn số lượng ${product.sku}`}>
+      <button type="button" onClick={()=>setQuantity(amount-1)} disabled={amount<=1} aria-label={`Giảm số lượng ${product.sku}`}>−</button>
+      <input type="number" inputMode="numeric" min="1" max={MAX_QUOTE_QUANTITY} step="1" value={quantity} aria-label={`Số lượng đặt ${product.sku}`} onChange={e=>setQuantity(e.target.value===''?'':normalizeQuantity(e.target.value))} onBlur={()=>setQuantity(amount)}/>
+      <button type="button" onClick={()=>setQuantity(amount+1)} disabled={amount>=MAX_QUOTE_QUANTITY} aria-label={`Tăng số lượng ${product.sku}`}>+</button>
+    </div></div>
+    <div className="product-card-bottom"><Link to={`/san-pham/${product.id}`}>Chi tiết<ArrowUpRight size={14}/></Link><button type="button" onClick={()=>{setQuantity(amount);addQuote(product,amount);}} className={selected?'selected':''} aria-label={`Thêm ${amount} ${product.sku} vào yêu cầu báo giá`}><Plus size={16}/><span>{selected?'Thêm nữa':'Báo giá'}</span></button></div>{selected&&<small className="product-quote-status"><Check size={11}/> Đã có trong danh sách</small>}</div></article>;
 }
 export function CategoryCard({ category }) {
   return <Link className="category-card" to={`/danh-muc/${category.id}`}><div className="category-image"><img src={category.image} alt={`${category.illustrative?'Hình minh họa AI':'Hình ảnh vật tư Hùng Nhi'} — ${category.name}`} loading="lazy"/>{category.illustrative&&<small className="illustration-label">MINH HỌA AI</small>}</div><div className="category-caption"><div><h3>{category.name}</h3><p>{category.description}</p></div><ArrowUpRight size={22}/></div></Link>;
