@@ -29,7 +29,15 @@
 .header-actions .header-quote .header-quote-label { display: inline; background: transparent; padding: 0; margin: 0; min-width: 0; font: inherit; white-space: nowrap; }
 @media (max-width: 680px) { .header-actions .header-quote .header-quote-label { display: none; } }
 
-.detail-copy .detail-actions { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.detail-copy .detail-actions { display: grid; grid-template-columns: 132px minmax(0, 1fr); align-items: end; gap: 12px; }
+.detail-copy .detail-actions > .button { width: 100%; min-width: 0; margin: 0; min-height: 48px; justify-content: center; white-space: normal; }
+.detail-copy .detail-actions > .button:last-child { grid-column: 1 / -1; }
+.detail-quantity-field .card-quantity-control { min-height: 48px; }
+@media (max-width: 480px) {
+  .detail-copy .detail-actions { grid-template-columns: 108px minmax(0, 1fr); gap: 10px; }
+  .detail-copy .detail-actions > .button { padding: 12px 10px; gap: 8px; }
+  .detail-copy .detail-quantity-field .card-quantity-control input { flex-basis: 40px; width: 40px; }
+}
 .detail-quantity-field { flex: 0 0 132px; }
 .detail-quantity-field label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: var(--navy); }
 .detail-quantity-field .card-quantity-control { display: flex; align-items: center; justify-content: space-between; border: 1px solid #b9c6d8; border-radius: 3px; overflow: hidden; background: #fff; }
