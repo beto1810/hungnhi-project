@@ -21,7 +21,7 @@ function configuredEndpoint(value) {
 
 export const quotationConfig = {
   endpoint: configuredEndpoint(import.meta.env?.VITE_QUOTE_ENDPOINT?.trim()),
-  zaloUrl: confirmedZaloURL(import.meta.env?.VITE_ZALO_URL?.trim()),
+  zaloUrl: confirmedZaloURL(import.meta.env?.VITE_ZALO_URL?.trim() || 'https://zalo.me/0911681900'),
   maxFileBytes: 5 * 1024 * 1024,
   maxTotalBytes: 15 * 1024 * 1024,
   maxFiles: 5,

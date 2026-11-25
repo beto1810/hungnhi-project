@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { quotationConfig, validateAttachments, sendQuotation } from '../src/businessConfig.js';
 
-test('unconfigured integration never sends a request', async () => {
+test('unconfigured quotation endpoint never sends while confirmed Zalo is enabled', async () => {
   assert.equal(quotationConfig.endpoint, null);
-  assert.equal(quotationConfig.zaloUrl, null);
+  assert.equal(quotationConfig.zaloUrl, 'https://zalo.me/0911681900');
   await assert.rejects(sendQuotation({ name: 'Test' }, []), /NOT_CONNECTED/);
 });
 

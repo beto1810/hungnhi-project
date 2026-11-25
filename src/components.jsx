@@ -7,7 +7,7 @@ import { ZaloLink } from './ConsultationForm.jsx';
 import { MAX_QUOTE_QUANTITY, normalizeQuantity } from './quoteQuantity.js';
 import './product-quantity.css';
 
-export const contact = { phone: '0918 539 848', phones: ['0918 539 848','0919 661 900','0918 682 900'], email: 'hungnhi0306@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
+export const contact = { phone: '0911681900', phones: ['0911681900','0911952900'], email: 'hungnhi0306@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
 export const brands = ['TOTAL', 'WADFOW', 'ASAKI', 'DCA', 'BOSCH', 'MAKITA'];
 export const brandLogos = { TOTAL: assetUrl('/assets/brand-logos/total.png'), WADFOW: assetUrl('/assets/brand-logos/wadfow.png'), ASAKI: assetUrl('/assets/brand-logos/asaki.svg'), DCA: assetUrl('/assets/brand-logos/dca.png'), BOSCH: assetUrl('/assets/brand-logos/bosch.png'), MAKITA: assetUrl('/assets/brand-logos/makita.png') };
 export const storefrontPhoto = assetUrl('/assets/retouched/storefront-unnamed1-clean-v2.webp');
@@ -44,7 +44,7 @@ export function Header({ quoteCount }) {
     return () => { document.removeEventListener('keydown', dismiss); document.removeEventListener('pointerdown', dismiss); };
   }, [mega]);
   const close = () => {setOpen(false);setMega(false);};
-  return <><a className="skip-link" href="#main" onClick={e=>{e.preventDefault();document.getElementById('main')?.focus();document.getElementById('main')?.scrollIntoView();}}>Chuyển đến nội dung</a><div className="topbar"><div className="container"><span>Vật tư cho dân dụng, xây dựng & công nghiệp</span><div><span>Đồng Nai, Việt Nam</span><a href="tel:0918539848"><Phone size={13}/> {contact.phone}</a></div></div></div>
+  return <><a className="skip-link" href="#main" onClick={e=>{e.preventDefault();document.getElementById('main')?.focus();document.getElementById('main')?.scrollIntoView();}}>Chuyển đến nội dung</a><div className="topbar"><div className="container"><span>Vật tư cho dân dụng, xây dựng & công nghiệp</span><div><span>Đồng Nai, Việt Nam</span><a href="tel:0911681900"><Phone size={13}/> {contact.phone}</a></div></div></div>
     <header className="site-header" ref={headerRef}><div className="container header-main"><Link to="/" onClick={close} aria-label="Hùng Nhi — Trang chủ" className="logo-link"><BrandLogo/></Link><nav aria-label="Điều hướng chính" className={open ? 'nav-open' : ''}>
       <NavLink to="/gioi-thieu" onClick={close}>Giới thiệu</NavLink><div className="products-nav"><div className="nav-product-row"><button className="products-menu-trigger" aria-controls="product-menu" aria-expanded={mega} onClick={()=>setMega(!mega)}>Sản phẩm<ChevronDown size={16}/></button></div></div>
       <NavLink to="/thuong-hieu" onClick={close}>Thương hiệu</NavLink><NavLink to="/giai-phap" onClick={close}>Giải pháp</NavLink><NavLink to="/lien-he" onClick={close}>Liên hệ</NavLink>
@@ -56,7 +56,7 @@ export function Footer() {
   return <footer className="footer compact-footer"><div className="container compact-footer-grid"><div className="compact-footer-about"><Link to="/" className="compact-footer-logo" aria-label="Hùng Nhi — Trang chủ"><BrandLogo/></Link><p>Cung cấp máy móc, dụng cụ và vật tư phục vụ dân dụng, xây dựng và công nghiệp.</p><small>© 2026 Hùng Nhi. All rights reserved.</small></div><div className="compact-footer-contact"><a href={`tel:${contact.phone.replaceAll(' ','')}`}><Phone size={18}/>{contact.phone}</a><a href={`mailto:${contact.email}`}><Mail size={18}/>{contact.email}</a></div><div className="compact-footer-navigation"><nav aria-label="Liên kết cuối trang"><Link to="/san-pham">Sản phẩm</Link><Link to="/thuong-hieu">Thương hiệu</Link><Link to="/gioi-thieu">Về Hùng Nhi</Link><Link to="/lien-he">Liên hệ</Link></nav><ZaloLink compact/></div></div></footer>;
 }
 export function QuoteCTA() {
-  return <section className="quote-cta"><div className="container"><div><p className="eyebrow">LIÊN HỆ HÙNG NHI</p><h2>Để việc chọn vật tư<br/>trở nên đơn giản hơn</h2><p>Gửi sản phẩm bạn cần hoặc công việc bạn đang thực hiện.<br/>Hùng Nhi sẽ hỗ trợ lựa chọn và báo giá phù hợp.</p></div><div><Button to="/bao-gia" light>Gửi yêu cầu báo giá</Button><a className="cta-phone" href="tel:0918539848"><Phone size={21}/><span><small>Hoặc trao đổi trực tiếp</small>{contact.phone}</span></a></div></div></section>;
+  return <section className="quote-cta"><div className="container"><div><p className="eyebrow">LIÊN HỆ HÙNG NHI</p><h2>Để việc chọn vật tư<br/>trở nên đơn giản hơn</h2><p>Gửi sản phẩm bạn cần hoặc công việc bạn đang thực hiện.<br/>Hùng Nhi sẽ hỗ trợ lựa chọn và báo giá phù hợp.</p></div><div><Button to="/bao-gia" light>Gửi yêu cầu báo giá</Button><a className="cta-phone" href="tel:0911681900"><Phone size={21}/><span><small>Hoặc trao đổi trực tiếp</small>{contact.phone}</span></a></div></div></section>;
 }
 export function ProductCard({ product, addQuote, selected }) {
   const [quantity, setQuantity] = useState(1);
