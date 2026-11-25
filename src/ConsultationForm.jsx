@@ -62,7 +62,7 @@ export default function ConsultationForm() {
     }
     if (fileError) return;
     if (!quotationConfig.endpoint) {
-      setState({ status: 'not-connected', message: 'Yêu cầu chưa được gửi: biểu mẫu chưa kết nối hệ thống tiếp nhận. Vui lòng liên hệ hungnhi19032006@gmail.com hoặc số điện thoại đã công bố.' });
+      setState({ status: 'not-connected', message: 'Yêu cầu chưa được gửi: biểu mẫu chưa kết nối hệ thống tiếp nhận. Vui lòng liên hệ hungnhi0306@gmail.com hoặc số điện thoại đã công bố.' });
       return;
     }
     setState({ status: 'sending', message: 'Đang gửi yêu cầu, vui lòng chờ…' });

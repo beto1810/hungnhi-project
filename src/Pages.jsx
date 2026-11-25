@@ -106,7 +106,7 @@ function InquiryForm({ quotation = false, quote = [], clearQuote }) {
   async function submit(e){
     e.preventDefault();
     if(status.kind==='sending')return;
-    if(!quotationConfig.endpoint){setStatus({kind:'error',message:'Bản demo chưa kết nối hệ thống gửi email. Thông tin chưa được gửi. Liên hệ: hungnhi19032006@gmail.com.'});return;}
+    if(!quotationConfig.endpoint){setStatus({kind:'error',message:'Bản demo chưa kết nối hệ thống gửi email. Thông tin chưa được gửi. Liên hệ: hungnhi0306@gmail.com.'});return;}
     setStatus({kind:'sending',message:'Đang gửi yêu cầu…'});
     try{await sendQuotation({...form,inquiryType:quotation?'quotation':'contact',...(quotation?{products:JSON.stringify(quote)}:{})},[]);setStatus({kind:'success',message:'Hệ thống đã tiếp nhận yêu cầu của bạn.'});}
     catch{setStatus({kind:'error',message:'Chưa xác nhận được yêu cầu đã gửi. Thông tin của bạn vẫn được giữ nguyên.'});}
