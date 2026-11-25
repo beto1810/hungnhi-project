@@ -7,7 +7,7 @@ import { ZaloLink } from './ConsultationForm.jsx';
 import { MAX_QUOTE_QUANTITY, normalizeQuantity } from './quoteQuantity.js';
 import './product-quantity.css';
 
-export const contact = { phone: '0911681900', phones: ['0911681900','0911952900'], email: 'hungnhi0306@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
+export const contact = { phone: '0911681900', phones: ['0911681900','0911952900'], email: 'hungnhi19032006@gmail.com', address: 'Số 826, Quốc lộ 51, Tổ 1, Khu phố Long An, Phường Long Thành, Thành phố Đồng Nai, Việt Nam' };
 export const brands = ['TOTAL', 'WADFOW', 'ASAKI', 'DCA', 'BOSCH', 'MAKITA'];
 export const brandLogos = { TOTAL: assetUrl('/assets/brand-logos/total.png'), WADFOW: assetUrl('/assets/brand-logos/wadfow.png'), ASAKI: assetUrl('/assets/brand-logos/asaki.svg'), DCA: assetUrl('/assets/brand-logos/dca.png'), BOSCH: assetUrl('/assets/brand-logos/bosch.png'), MAKITA: assetUrl('/assets/brand-logos/makita.png') };
 export const storefrontPhoto = assetUrl('/assets/retouched/storefront-unnamed1-clean-v2.webp');

@@ -1,3 +1,4 @@
+import { quotationConfig, sendQuotation } from './businessConfig.js';
 import { assetUrl } from './assets.js';
 import { MAX_QUOTE_QUANTITY, normalizeQuantity } from './quoteQuantity.js';
 import './product-quantity.css';
@@ -99,12 +100,19 @@ export function Knowledge() {
 
 function InquiryForm({ quotation = false, quote = [], clearQuote }) {
   const [params]=useSearchParams();
-  const [submitted,setSubmitted]=useState(false);
+  const [status,setStatus]=useState({kind:'idle',message:''});
   const [form,setForm]=useState({name:'',company:'',email:'',phone:'',message:params.get('nhu-cau')||''});
   function update(e){setForm({...form,[e.target.name]:e.target.type==='checkbox'?e.target.checked:e.target.value});}
-  function submit(e){e.preventDefault();setSubmitted(true);}
-  if(submitted)return <div className="demo-confirmation" role="status"><CheckCircle2 size={44} strokeWidth={1.3}/><p className="eyebrow">HOÀN TẤT THAO TÁC DEMO</p><h2>Yêu cầu đã được minh họa</h2><p>Đây là bản prototype: <strong>không có thông tin nào được gửi đến Hùng Nhi</strong>. Bạn có thể xem lại trải nghiệm hoặc liên hệ trực tiếp qua hotline nếu cần trao đổi thực tế.</p>{quotation&&<p>Danh sách gồm {quote.length} mã sản phẩm mẫu.</p>}<button className="button" onClick={()=>setSubmitted(false)}>Quay lại biểu mẫu<ArrowRight size={17}/></button></div>;
-  return <form className="inquiry-form" onSubmit={submit}><div className="form-grid"><label>Họ và tên <span>*</span><input required name="name" autoComplete="name" value={form.name} onChange={update} placeholder="Nguyễn Văn…" maxLength={100}/></label><label>Công ty / Đơn vị<input name="company" autoComplete="organization" value={form.company} onChange={update} placeholder="Tên công ty hoặc đơn vị" maxLength={150}/></label><label>Email <span>*</span><input required type="email" name="email" autoComplete="email" value={form.email} onChange={update} placeholder="email@congty.vn"/></label><label>Số điện thoại <span>*</span><input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={update} placeholder="Số điện thoại liên hệ" pattern="[+0-9 ()-]{8,20}"/></label><label className="full-width">{quotation?'Nhu cầu & quy cách cần đối chiếu':'Nội dung trao đổi'} <span>*</span><textarea required name="message" rows={5} value={form.message} onChange={update} placeholder="Mã hàng, quy cách, số lượng, địa điểm giao nhận hoặc nội dung cần hỗ trợ…" maxLength={4000}/></label></div><button className="button" type="submit">{quotation?'Gửi yêu cầu báo giá':'Xem xác nhận demo'}<ArrowUpRight size={18}/></button></form>;
+  async function submit(e){
+    e.preventDefault();
+    if(status.kind==='sending')return;
+    if(!quotationConfig.endpoint){setStatus({kind:'error',message:'Bản demo chưa kết nối hệ thống gửi email. Thông tin chưa được gửi. Liên hệ: hungnhi19032006@gmail.com.'});return;}
+    setStatus({kind:'sending',message:'Đang gửi yêu cầu…'});
+    try{await sendQuotation({...form,inquiryType:quotation?'quotation':'contact',...(quotation?{products:JSON.stringify(quote)}:{})},[]);setStatus({kind:'success',message:'Hệ thống đã tiếp nhận yêu cầu của bạn.'});}
+    catch{setStatus({kind:'error',message:'Chưa xác nhận được yêu cầu đã gửi. Thông tin của bạn vẫn được giữ nguyên.'});}
+  }
+
+  return <form className="inquiry-form" onSubmit={submit} aria-busy={status.kind==='sending'}><div className="form-grid"><label>Họ và tên <span>*</span><input required name="name" autoComplete="name" value={form.name} onChange={update} placeholder="Nguyễn Văn…" maxLength={100}/></label><label>Công ty / Đơn vị<input name="company" autoComplete="organization" value={form.company} onChange={update} placeholder="Tên công ty hoặc đơn vị" maxLength={150}/></label><label>Email <span>*</span><input required type="email" name="email" autoComplete="email" value={form.email} onChange={update} placeholder="email@congty.vn"/></label><label>Số điện thoại <span>*</span><input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={update} placeholder="Số điện thoại liên hệ" pattern="[+0-9 ()-]{8,20}"/></label><label className="full-width">{quotation?'Nhu cầu & quy cách cần đối chiếu':'Nội dung trao đổi'} <span>*</span><textarea required name="message" rows={5} value={form.message} onChange={update} placeholder="Mã hàng, quy cách, số lượng, địa điểm giao nhận hoặc nội dung cần hỗ trợ…" maxLength={4000}/></label></div><p role="status">{status.message}</p><button className="button" type="submit" disabled={status.kind==='sending'||status.kind==='success'}>{status.kind==='sending'?'Đang gửi yêu cầu…':quotation?'Gửi yêu cầu báo giá':'Gửi yêu cầu tư vấn'}</button></form>;
 }
 
 export function Contact() {
