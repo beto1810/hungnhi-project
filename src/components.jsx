@@ -69,7 +69,7 @@ export function ProductCard({ product, addQuote, selected }) {
     </div><button type="button" onClick={()=>{setQuantity(amount);addQuote(product,amount);}} className={`product-quote-button${selected?' selected':''}`} title={selected?'Bấm để thêm tiếp số lượng đã chọn':undefined} aria-label={`Thêm ${amount} ${product.sku} vào yêu cầu báo giá`}>{selected&&<Check size={18}/>}<span>{selected?'Đã thêm':'Thêm vào báo giá'}</span></button></div></div></article>;
 }
 export function CategoryCard({ category }) {
-  return <Link className="category-card" to={`/danh-muc/${category.id}`}><div className="category-image"><img src={category.image} alt={`${category.illustrative?'Hình minh họa AI':'Hình ảnh vật tư Hùng Nhi'} — ${category.name}`} loading="lazy"/>{category.illustrative&&<small className="illustration-label">MINH HỌA AI</small>}</div><div className="category-caption"><div><h3>{category.name}</h3><p>{category.description}</p></div><ArrowUpRight size={22}/></div></Link>;
+  return <Link className="category-card" to={`/danh-muc/${category.id}`}><div className="category-image"><img src={category.image} alt={`${category.illustrative?'Hình minh họa':'Hình ảnh vật tư Hùng Nhi'} — ${category.name}`} loading="lazy"/></div><div className="category-caption"><div><h3>{category.name}</h3><p>{category.description}</p></div><ArrowUpRight size={22}/></div></Link>;
 }
 export const strengths = [
   {icon:ClipboardList,title:'Danh mục rõ ràng',description:'Tìm vật tư theo nhóm hàng và nhu cầu công việc.'},

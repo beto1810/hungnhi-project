@@ -8,3 +8,5 @@
 .hn-zalo-dialog__image{display:block;width:100%;height:auto;max-height:calc(100dvh - 120px);object-fit:contain;background:#315778}
 .hn-zalo-dialog__hint{margin:0;padding:10px 18px;text-align:center;font-size:13px;color:#687084}
 .compact-footer .zalo-button>svg:first-child{display:block}
+
+.category-image img[src*="/assets/categories/industrial-valves-v1"],.category-image img[src*="/assets/categories/welding-supplies-v1"]{object-fit:contain;background:#e9edf1}

@@ -29,7 +29,7 @@
         "name": "Xe đẩy & Dụng cụ vận chuyển"
       }
     ],
-    "image": "/assets/tools-wall.webp",
+    "image": "/assets/steel-stock.webp",
     "aliases": [
       "dung-cu-cam-tay",
       "do-luong-kiem-tra",
@@ -103,8 +103,9 @@
         "name": "Van khác"
       }
     ],
-    "image": "/assets/steel-stock.webp",
-    "aliases": []
+    "image": "/assets/categories/industrial-valves-v1.png",
+    "aliases": [],
+    "illustrative": true
   },
   {
     "id": "bulong-oc-vit",
@@ -148,11 +149,12 @@
         "name": "Phụ kiện hàn"
       }
     ],
-    "image": "/assets/hand-tools.webp",
+    "image": "/assets/categories/welding-supplies-v1.png",
     "aliases": [
       "han-cat-mai",
       "thiet-bi-vat-tu-han"
-    ]
+    ],
+    "illustrative": true
   },
   {
     "id": "son-keo-hoa-chat",
