@@ -1,13 +1,20 @@
+import { assetUrl } from './assets.js';
+import './zalo-qr.css';
 import React, { useId, useRef, useState } from 'react';
 import { MessageCircle, Paperclip, ArrowUpRight, X, FileText, LoaderCircle, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { quotationConfig, validateAttachments, sendQuotation } from './businessConfig.js';
 
 export function ZaloLink({ compact = false }) {
+  const dialog = useRef(null);
+  const titleId = useId();
   const label = compact ? 'Zalo' : 'Liên hệ qua Zalo';
   return <div className={`zalo-control ${compact ? 'zalo-compact' : ''}`}>
-    {quotationConfig.zaloUrl
-      ? <a className="zalo-button" href={quotationConfig.zaloUrl} target="_blank" rel="noreferrer"><MessageCircle size={17}/>{label}<ArrowUpRight size={16}/></a>
-      : <><button className="zalo-button" disabled type="button" title="Chưa có URL Zalo được xác nhận"><MessageCircle size={17}/>{label}<ArrowUpRight size={16}/></button><small>Chờ cấu hình URL Zalo đã xác nhận.</small></>}
+    <button type="button" className="zalo-button" aria-haspopup="dialog" onClick={() => dialog.current.showModal()}><MessageCircle size={17}/>{label}</button>
+    <dialog ref={dialog} className="hn-zalo-dialog" aria-labelledby={titleId} onClick={event => { if (event.target === event.currentTarget) dialog.current.close(); }}>
+      <div className="hn-zalo-dialog__header"><h2 id={titleId} className="hn-zalo-dialog__title">Kết nối Zalo · Hùng Nhi</h2><button type="button" className="hn-zalo-dialog__close" aria-label="Đóng mã QR Zalo" onClick={() => dialog.current.close()} autoFocus>×</button></div>
+      <img className="hn-zalo-dialog__image" src={assetUrl('/assets/contact/zalo-hung-nhi-qr.png')} alt="Mã QR danh thiếp Zalo An - Hùng Nhi" width="984" height="1200"/>
+      <p className="hn-zalo-dialog__hint">Mở Zalo để quét mã QR hoặc chọn ảnh mã QR từ thư viện.</p>
+    </dialog>
   </div>;
 }
 
